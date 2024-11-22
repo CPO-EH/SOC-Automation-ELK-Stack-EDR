@@ -1,0 +1,193 @@
+# ElasticSearch & Kibana Installation on Ubuntu 22.04
+
+This guide documents the installation and configuration of **ElasticSearch** and **Kibana** on an Ubuntu 22.04 server hosted on Vultr. The server is optimized with 80GB storage, 4vCPUs, and 16GB memory. It is configured on a VPC network with both public and private IP addresses:
+
+- **Private IP**: `172.31.0.3`  
+- **Public IP**: `149.28.235.88`  
+- **Hostname**: `TechGneek-ELK`
+
+---
+
+## Prerequisites
+
+Before starting the installation, ensure the following:
+1. **Server setup**:
+   - Ubuntu 22.04.
+   - Properly configured VPC and firewall rules to allow access to necessary ports.
+   - SOC analyst laptop IP whitelisted in the firewall.
+2. **Firewall rules**:
+   - Open **ports 9200** (ElasticSearch) and **5601** (Kibana) for the SOC analyst laptop.
+3. **Dependencies installed**:
+   ```bash
+   sudo apt-get update && sudo apt-get upgrade -y
+   ```
+
+---
+
+## Installation Steps
+
+### Step 1: ElasticSearch Installation
+
+1. Download the ElasticSearch `.deb` package:
+   ```bash
+   wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.15.2-amd64.deb
+   ```
+
+2. Install the package:
+   ```bash
+   sudo dpkg -i elasticsearch-8.15.2-amd64.deb
+   ```
+
+3. Configure `elasticsearch.yml`:
+   - Open the configuration file:
+     ```bash
+     sudo nano /etc/elasticsearch/elasticsearch.yml
+     ```
+   - Update the following lines:
+     ```yaml
+     network.host: 149.28.235.88
+     http.port: 9200
+     ```
+
+4. Reload the daemon and enable the service:
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl enable elasticsearch.service
+   ```
+
+5. Start the ElasticSearch service:
+   ```bash
+   sudo systemctl start elasticsearch.service
+   ```
+
+6. Verify the service status:
+   ```bash
+   sudo systemctl status elasticsearch.service
+   ```
+
+---
+
+### Step 2: Kibana Installation
+
+1. Download the Kibana `.deb` package:
+   ```bash
+   wget https://artifacts.elastic.co/downloads/kibana/kibana-8.15.2-amd64.deb
+   ```
+
+2. Install the package:
+   ```bash
+   sudo dpkg -i kibana-8.15.2-amd64.deb
+   ```
+
+3. Configure `kibana.yml`:
+   - Open the configuration file:
+     ```bash
+     sudo nano /etc/kibana/kibana.yml
+     ```
+   - Update the following lines:
+     ```yaml
+     server.port: 5601
+     server.host: "149.28.235.88"
+     ```
+
+4. Reload the daemon and enable the service:
+   ```bash
+   sudo systemctl daemon-reload
+   sudo systemctl enable kibana.service
+   ```
+
+5. Start the Kibana service:
+   ```bash
+   sudo systemctl start kibana.service
+   ```
+
+6. Verify the service status:
+   ```bash
+   sudo systemctl status kibana.service
+   ```
+
+---
+
+### Step 3: ElasticSearch and Kibana Integration
+
+1. Generate the ElasticSearch enrollment token:
+   ```bash
+   cd /usr/share/elasticsearch/bin
+   ./elasticsearch-create-enrollment-token --scope kibana
+   ```
+   - Save the token to your notepad for later use.
+
+2. Open Kibana in your web browser:
+   - Navigate to: `http://149.28.235.88:5601`
+
+3. Enter the enrollment token in the Kibana GUI.
+
+4. Retrieve the Kibana verification code:
+   ```bash
+   cd /usr/share/kibana/bin
+   ./kibana-verification-code
+   ```
+
+5. Enter the verification code in the Kibana GUI.
+
+---
+
+### Step 4: Configure Encryption Keys (Optional but Recommended)
+
+1. Generate and add encryption keys:
+   ```bash
+   cd /usr/share/kibana/bin
+   ./kibana-encryption-keys generate
+   ```
+
+2. Copy the keys and add them to Kibana:
+   ```bash
+   ./kibana-keystore add xpack.encryptedSavedObjects.encryptionKey
+   ./kibana-keystore add xpack.reporting.encryptionKey
+   ./kibana-keystore add xpack.security.encryptionKey
+   ```
+
+3. Restart Kibana to apply the changes:
+   ```bash
+   sudo systemctl restart kibana.service
+   ```
+
+---
+
+### Step 5: Configure Firewall Rules
+
+1. Allow ports 9200 and 5601:
+   ```bash
+   sudo ufw allow 9200
+   sudo ufw allow 5601
+   ```
+
+2. Whitelist the SOC analyst laptop IP in Vultr:
+   - Add a firewall rule to the Vultr server to allow traffic only from the SOC analyst's IP.
+
+---
+
+### Testing and Validation
+
+1. Test ElasticSearch:
+   - Navigate to `http://149.28.235.88:9200` in a browser or use `curl`:
+     ```bash
+     curl -X GET http://149.28.235.88:9200
+     ```
+
+2. Test Kibana:
+   - Navigate to `http://149.28.235.88:5601` in a browser.
+
+---
+
+### Key Notes
+
+- **Resource Requirements**: Ensure the server has enough CPU and memory resources for ElasticSearch and Kibana.
+- **Access Control**: Restrict access to ports 9200 and 5601 using Vultr's firewall to prevent unauthorized access.
+- **Monitoring**: Regularly monitor the ElasticSearch and Kibana services using:
+  ```bash
+  systemctl status elasticsearch.service
+  systemctl status kibana.service
+  ```
+
+---
