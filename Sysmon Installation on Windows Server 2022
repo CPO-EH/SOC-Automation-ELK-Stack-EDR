@@ -1,0 +1,87 @@
+# Sysmon Installation on Windows Server 2022
+
+## Objective
+The objective of this section is to document the installation and configuration of **Sysmon v15.15** on a Windows Server 2022 hosted on Vultr. This configuration is critical for capturing detailed event logs and analyzing malicious activities for DFIR purposes.
+
+### System Details:
+- **Windows Version**: Windows Server 2022 Standard  
+- **Hostname**: `MYDFIR-WIN-TechGneek`  
+- **Public IP**: `107.191.42.102`  
+- **Hardware Specs**:  
+  - **Storage**: 55GB  
+  - **CPU**: 1 vCPU  
+  - **RAM**: 2048 MB  
+- **RDP**: Enabled  
+- **Firewall**: Not yet added  
+
+---
+
+## Installation Steps
+
+### Step 1: Prepare the Environment
+1. **Enable RDP**:
+   - Ensure that Remote Desktop Protocol (RDP) is enabled for accessing the server remotely.
+
+2. **Download Sysmon**:
+   - Download the **Sysmon v15.15** binary:
+     - Navigate to the [Sysinternals website](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon) and download the `Sysmon.zip` file.
+
+3. **Download the Sysmon Config**:
+   - Use the modular configuration file for Sysmon:
+     - URL: [Sysmon Modular Configuration](https://github.com/olafhartong/sysmon-modular/blob/master/sysmonconfig.xml)
+   - Save the file as `sysmonconfig.xml`.
+
+---
+
+### Step 2: Install Sysmon
+1. Extract Sysmon files:
+   ```powershell
+   cd C:\Users\Administrator\Downloads\Sysmon
+   dir
+   ```
+
+2. Install Sysmon with the configuration file:
+   ```powershell
+   .\Sysmon64.exe -i sysmonconfig.xml
+   ```
+   - Agree to the Sysmon license agreement by clicking **OK** when prompted.
+
+---
+
+### Step 3: Verify the Installation
+1. **Check Running Services**:
+   - Open **Task Manager** and ensure that `Sysmon64.exe` is running under the processes tab.  
+     *(Refer to Screenshot: `sysmon-service-taskmanager.png`)*
+
+2. **Validate Event Logs**:
+   - Open **Windows Event Viewer**:
+     - Navigate to `Applications and Services Logs > Microsoft > Windows > Sysmon > Operational`.
+     - Verify that Sysmon is generating detailed event logs.
+     *(Refer to Screenshot: `sysmon-eventviewer.png`)*
+
+---
+
+### Screenshots
+Below are the screenshots of the process:
+
+#### Screenshot 1: Installing Sysmon  
+![Installing Sysmon] https://imgur.com/a/sysmon-install-lKJOstz
+
+#### Screenshot 2: Sysmon Directory and Configuration  
+![Sysmon Directory] https://imgur.com/a/sysmon-install-lKJOstz
+
+#### Screenshot 3: Sysmon Running in Task Manager  
+![Sysmon Running] https://imgur.com/a/sysmon-install-lKJOstz
+
+---
+
+### Notes
+- **Sysmon Modular Configuration**:
+  - The modular configuration used here helps tailor the Sysmon output to capture relevant events, reducing noise.
+  - For further customizations, refer to the [Sysmon Modular GitHub repository](https://github.com/olafhartong/sysmon-modular).
+
+- **Event Analysis**:
+  - Use tools like Elastic Defend or Kibana to ingest Sysmon logs and analyze them for threats.
+
+- **Firewall**:
+  - Once testing is complete, consider adding the server to the SOC simulation firewall for secure logging.
