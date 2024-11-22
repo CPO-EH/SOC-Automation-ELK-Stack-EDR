@@ -23,3 +23,8 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 - Kali Linux: Offensive security platform for attack emulation.
 - Vultr: Cloud hosting platform for network architecture deployment.
 - Elastic Defend: Endpoint protection solution for detecting and responding to threats in real time.
+
+## Project Walkthrough
+
+- ELK Stack server install on Ubuntu OS
+- 
