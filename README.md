@@ -26,5 +26,9 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 
 ## Project Walkthrough
 
+- Network Diagram & Attack Lifecycle (Mitre Att&ck Framework)
+<div align="center">
+  <img width="502" alt="Screen Shot 2024-11-05 at 8 54 15 PM" src="https://github.com/user-attachments/assets/07b7e03b-e87d-4b66-97e7-83e7339b71f6">
+</div>
 - ELK Stack server install on Ubuntu OS
 - 
