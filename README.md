@@ -1,0 +1,1 @@
+# SOC-Automation-ELK-Stack-EDR
