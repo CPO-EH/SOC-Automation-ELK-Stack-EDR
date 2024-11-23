@@ -43,4 +43,47 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 </div>
 
 - ELK Stack server install on Ubuntu OS
-- 
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Download ElasticSearch/Kibana </strong><br>
+        <img width="300" alt="Screenshot 1: Starting ElasticSearch Installation" src="https://github.com/user-attachments/assets/56f9ae9f-63f2-4ce2-9d21-46c5dd490c8a">
+      </td>
+      <td align="center">
+        <strong>Installing ElasticSearch </strong><br>
+        <img width="300" alt="Screenshot 2: Verifying ElasticSearch Configuration" src="https://github.com/user-attachments/assets/d140e795-f108-4df1-894d-60080dc00899">
+      </td>
+      <td align="center">
+        <strong>Configuring Kibana Settings</strong><br>
+        <img width="300" alt="Screenshot 3: Configuring Kibana Settings" src="https://github.com/user-attachments/assets/a4872a0e-7d11-432d-986f-da2524c55793">
+      </td>
+      <td align="center">
+        <strong>Generating Encryption Keys</strong><br>
+        <img width="300" alt="Screenshot 4: Firewall Rule Configuration" src="https://github.com/user-attachments/assets/4a4b6b61-acf3-492f-9521-afac95eb150a">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Configuring Firewalls For ELK Stack Server</strong><br>
+        <img width="300" alt="Screenshot 5: Generating Encryption Keys" src="https://github.com/user-attachments/assets/6b562fad-5df6-4247-be1d-fc61bd1a7c69">
+      </td>
+      <td align="center">
+        <strong>Testing Open Ports On Server</strong><br>
+        <img width="300" alt="Screenshot 6: ElasticSearch Service Status" src="https://github.com/user-attachments/assets/6f47e70f-660c-47dc-8752-5d1b2f25e279">
+      </td>
+      <td align="center">
+        <strong>Configuring Encryption Keys</strong><br>
+        <img width="300" alt="Screenshot 7: Testing Open Ports" src="https://github.com/user-attachments/assets/48926403-441a-4fc0-aae7-b80ab0c703cb">
+      </td>
+      <td align="center">
+        <strong>Completed Kibana Setup</strong><br>
+        <img width="300" alt="Screenshot 8: Completed Kibana Setup" src="https://github.com/user-attachments/assets/fe31b04b-12b6-43de-9eff-d83bc673a9b1">
+      </td>
+    </tr>
+  </table>
+</div>
+
+
