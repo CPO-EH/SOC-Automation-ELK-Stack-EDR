@@ -89,7 +89,7 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
-- Windows 2022 server install (Vultr Cloud)
+- [Windows 2022 Server Install (Vultr Cloud)](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Windows%20Server%202022%20Installation)
 <div align="center">
   <table>
     <!-- Row 1 -->
