@@ -1,0 +1,88 @@
+Here’s a structured and GitHub-ready Markdown layout for your **Elastic Agent - Fleet Server Install** documentation. I've incorporated the provided image placeholders and aligned the instructions properly.
+
+---
+
+# Elastic Agent - Fleet Server Installation
+
+## Overview
+The **Elastic Agent Fleet Server** is set up on an Ubuntu 22.04 server to manage and collect logs from connected agents in the Elastic Stack.
+
+### Fleet Server Configuration
+- **Server Name**: TechGneek-Fleet-Server  
+- **Private IP**: 172.31.0.4  
+- **Public IP**: 149.28.237.158  
+- **Hardware Specs**:
+  - 1 vCPU
+  - 4 GB RAM
+  - 30 GB Storage  
+- **Fleet Server URL**: https://149.28.237.158:8220
+
+---
+
+## Installation Steps
+
+### 1. **Prepare the Server**
+Update and upgrade the server packages:
+```bash
+sudo apt-get update && sudo apt-get upgrade -y
+```
+
+### 2. **Download Elastic Agent**
+Download the Elastic Agent package from Elastic's official site:
+```bash
+curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.15.2-linux-x86_64.tar.gz
+tar xzvf elastic-agent-8.15.2-linux-x86_64.tar.gz
+cd elastic-agent-8.15.2-linux-x86_64
+```
+
+### 3. **Install Fleet Server**
+Run the following command to install Fleet Server and connect it to the Elastic Stack:
+```bash
+sudo ./elastic-agent install \
+  --fleet-server-es=https://149.28.235.88:9200 \
+  --fleet-server-service-token=AAEAAWVsYXN0aWMvZmxlZXQtc2VydmVyL3Rva2VuLTE3MjgwNTc1MDYzNDA6VXlrYkkzRHpSd0NmU3JmTFYxVFFaZw \
+  --fleet-server-policy=fleet-server-policy \
+  --fleet-server-es-ca-trusted-fingerprint=19699e2adf5e1715c0c81415b6b3958d880a6281e036b6b1036650cbf703d925 \
+  --fleet-server-port=8220
+```
+
+### 4. **Firewall Configuration**
+Open required ports to ensure the agents and Fleet Server communicate:
+```bash
+sudo ufw allow 8220
+sudo ufw allow 443
+```
+
+---
+
+## Troubleshooting
+- If agents fail to connect, ensure:
+  - The Fleet Server URL is correct in the **Kibana Fleet Settings**:  
+    `https://149.28.237.158:8220`  
+  - Required ports (`8220` and `443`) are open in the server firewall.
+
+---
+
+## Windows Agent Installation
+To install Elastic Agent on a Windows Server (IP: 107.191.42.102), use the following PowerShell commands:
+```powershell
+Invoke-WebRequest -Uri https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.15.4-windows-x86_64.zip -OutFile elastic-agent-8.15.4-windows-x86_64.zip
+Expand-Archive .\elastic-agent-8.15.4-windows-x86_64.zip -DestinationPath .
+cd elastic-agent-8.15.4-windows-x86_64
+.\elastic-agent.exe install --url=https://149.28.237.158:8220 --enrollment-token=<YOUR_ENROLLMENT_TOKEN>
+```
+
+---
+
+## Command History
+Here’s the command history for Fleet Server installation and configuration:
+```plaintext
+1  clear
+2  apt-get update && apt-get upgrade -y
+3  curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.15.2-linux-x86_64.tar.gz
+4  tar xzvf elastic-agent-8.15.2-linux-x86_64.tar.gz
+5  cd elastic-agent-8.15.2-linux-x86_64
+6  sudo ./elastic-agent install --fleet-server-es=https://149.28.235.88:9200 --fleet-server-service-token=AAEAAWVsYXN0aWMvZmxlZXQtc2VydmVyL3Rva2VuLTE3MjgwNTc1MDYzNDA6VXlrYkkzRHpSd0NmU3JmTFYxVFFaZw --fleet-server-policy=fleet-server-policy --fleet-server-es-ca-trusted-fingerprint=19699e2adf5e1715c0c81415b6b3958d880a6281e036b6b1036650cbf703d925 --fleet-server-port=8220
+7  ufw allow 8220
+8  ufw allow 443
+```
