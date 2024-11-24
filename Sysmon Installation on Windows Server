@@ -1,0 +1,58 @@
+Sysmon Installation on Windows Server
+The following steps outline the installation of Sysmon v15.15 on a Windows Server 2022. This configuration leverages the Sysmon Modular Config for enhanced event logging.
+
+Steps
+Download Sysmon:
+
+Download Sysmon v15.15 from the official Sysinternals Website.
+Download the Sysmon Modular Configuration:
+File: Sysmon Config XML.
+Install Sysmon:
+
+Navigate to the Sysmon directory:
+powershell
+Copy code
+cd C:\Users\Administrator\Downloads\Sysmon
+dir
+Install Sysmon with the configuration file:
+powershell
+Copy code
+.\Sysmon64.exe -i sysmonconfig.xml
+Agree to the license agreement when prompted.
+Verify Sysmon Installation:
+
+Check the Task Manager for Sysmon64.exe to confirm the service is running.
+Use Event Viewer to ensure Sysmon logs are being generated.
+
+Sysmon Installation on Windows Server
+The following steps outline the installation of Sysmon v15.15 on a Windows Server 2022. This configuration leverages the Sysmon Modular Config for enhanced event logging.
+
+Steps
+Download Sysmon:
+
+Download Sysmon v15.15 from the official Sysinternals Website.
+Download the Sysmon Modular Configuration:
+File: Sysmon Config XML.
+Install Sysmon:
+
+Navigate to the Sysmon directory:
+powershell
+Copy code
+cd C:\Users\Administrator\Downloads\Sysmon
+dir
+Install Sysmon with the configuration file:
+powershell
+Copy code
+.\Sysmon64.exe -i sysmonconfig.xml
+Agree to the license agreement when prompted.
+Verify Sysmon Installation:
+
+Check the Task Manager for Sysmon64.exe to confirm the service is running.
+Use Event Viewer to ensure Sysmon logs are being generated.
+
+Notes
+Sysmon Modular Config: The modular configuration enhances log quality by reducing noise and focusing on relevant events. Customize further for your specific use case.
+Event Viewer:
+Logs can be found under:
+Applications and Services Logs > Microsoft > Windows > Sysmon > Operational
+Ensure that RDP is enabled for remote access during the setup process.
