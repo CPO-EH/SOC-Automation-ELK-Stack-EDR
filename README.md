@@ -29,18 +29,20 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 - Network Diagram & Attack Lifecycle (Mitre Att&ck Framework)
 <div align="center">
   <table>
+    <!-- Row 1 -->
     <tr>
       <td align="center">
         <strong>Network Diagram</strong><br>
-        <img width="502" alt="Screen Shot 2024-11-05 at 8 54 15 PM" src="https://github.com/user-attachments/assets/07b7e03b-e87d-4b66-97e7-83e7339b71f6">
+        <img width="300" alt="Screenshot 1: Network Diagram" src="https://github.com/user-attachments/assets/07b7e03b-e87d-4b66-97e7-83e7339b71f6">
       </td>
       <td align="center">
         <strong>Attack Lifecycle</strong><br>
-        <img width="388" alt="Screen Shot 2024-11-05 at 7 39 48 PM" src="https://github.com/user-attachments/assets/684acdaf-a0bc-4446-a734-319d331de529">
+        <img width="300" alt="Screenshot 2: Attack Lifecycle" src="https://github.com/user-attachments/assets/684acdaf-a0bc-4446-a734-319d331de529">
       </td>
     </tr>
   </table>
 </div>
+
 
 - [ELK Stack server install on UbuntuOS (Vultr Cloud)](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/ELK%20Stack%20Server%20Install)
 
@@ -87,4 +89,20 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- Windows 2022 server install (Vultr Cloud)
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Vultr Windows Server Deployment</strong><br>
+        <img width="300" alt="Screenshot 1: Vultr Deployment" src="https://github.com/user-attachments/assets/ac9939b6-60ba-41c7-b3d2-9a0511ab1d34">
+      </td>
+      <td align="center">
+        <strong>Initial Windows Server Login via RDP</strong><br>
+        <img width="300" alt="Screenshot 2: Initial Login via RDP" src="https://github.com/user-attachments/assets/37c56dbf-68ed-4ac0-b275-d42e040e3065">
+      </td>
+    </tr>
+  </table>
+</div>
 
