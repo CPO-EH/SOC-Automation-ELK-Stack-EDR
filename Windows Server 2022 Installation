@@ -1,0 +1,35 @@
+Windows Server 2022 Installation (Vultr Cloud)
+Objective
+Documenting the setup and configuration of a Windows Server 2022 Standard instance on Vultr Cloud for use in SOC Automation ELK Stack EDR projects.
+
+System Details:
+Operating System: Windows Server 2022 Standard
+Hostname: MYDFIR-WIN-TechGneek
+Public IP: 107.191.42.102
+Hardware Specifications:
+Storage: 55GB
+CPU: 1 vCPU
+RAM: 2048 MB
+Steps:
+Provision the Windows Server on Vultr:
+
+Selected Windows Server 2022 Standard from the Vultr marketplace.
+Configured the server with:
+Public IP Address: 107.191.42.102
+55GB Storage
+1 vCPU and 2GB RAM.
+Enable Remote Desktop Protocol (RDP):
+
+Ensured RDP was enabled to allow remote access.
+Initial Configuration:
+
+Updated the server hostname to MYDFIR-WIN-TechGneek.
+Configured the network settings as needed for project requirements.
+
+Notes:
+Firewall Rules:
+This server will NOT be added to firewall. Configure rules at your own leisure to restrict access to specific IPs.
+Resource Limitations:
+While this setup works for basic SOC testing, consider upgrading resources for more intensive workloads.
+Sysmon Installation:
+Follow the Sysmon Installation documentation to configure event logging on this server.
