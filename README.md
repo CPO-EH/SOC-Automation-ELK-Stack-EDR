@@ -106,3 +106,28 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Sysmon Installation on 2022 Windows Server](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Sysmon%20Installation%20on%20Windows%20Server%202022)
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <strong>Sysmon Installation Command</strong><br>
+        <img width="300" alt="Sysmon Installation Command" src="https://github.com/user-attachments/assets/06874827-1bd5-43f2-af4c-99dac4631161">
+      </td>
+      <td align="center">
+        <strong>Sysmon Configuration File</strong><br>
+        <img width="300" alt="Sysmon Configuration File" src="https://github.com/user-attachments/assets/113cfd78-88a4-4efe-9d09-08610e48ba40">
+      </td>
+      <td align="center">
+        <strong>Sysmon Running in Task Manager</strong><br>
+        <img width="300" alt="Sysmon Running in Task Manager" src="https://github.com/user-attachments/assets/b7e585fe-6aac-439e-8db7-d776dc9c0c68">
+      </td>
+      <td align="center">
+        <strong>Sysmon Event Viewer Logs</strong><br>
+        <img width="300" alt="Sysmon Event Viewer Logs" src="https://github.com/user-attachments/assets/582c6270-58cb-4747-8669-a2d803513bb7">
+      </td>
+    </tr>
+  </table>
+</div>
+
