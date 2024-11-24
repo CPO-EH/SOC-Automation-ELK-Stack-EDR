@@ -42,7 +42,8 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
-- ELK Stack server install on Ubuntu OS
+- [ELK Stack server install on UbuntuOS](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/ELK%20Stack%20Server%20Install)
+
 <div align="center">
   <table>
     <!-- Row 1 -->
