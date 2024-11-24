@@ -131,3 +131,48 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Elastic Agent - Fleet Server Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Elastic%20Agent%20-%20Fleet%20Server%20Installation)
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Fleet Server Overview</strong><br>
+        <img width="300" alt="Fleet Server Overview" src="https://github.com/user-attachments/assets/5b6e302f-be26-4a40-9f47-2db149c92aad">
+      </td>
+      <td align="center">
+        <strong>Fleet Server Policy Configuration</strong><br>
+        <img width="300" alt="Fleet Server Policy Configuration" src="https://github.com/user-attachments/assets/36de40dc-95c3-4b31-ad95-57b5acdef3fb">
+      </td>
+      <td align="center">
+        <strong>Fleet Server Added</strong><br>
+        <img width="300" alt="Fleet Server Added" src="https://github.com/user-attachments/assets/586d18ae-11a0-4c6a-b5f2-3eecf18f53a2">
+      </td>
+      <td align="center">
+        <strong>Kibana Fleet Settings</strong><br>
+        <img width="300" alt="Kibana Fleet Settings" src="https://github.com/user-attachments/assets/79d704a0-8164-43e2-9823-ba05f2b4a252">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Windows Fleet Agent Install</strong><br>
+        <img width="300" alt="Windows Fleet Agent Install" src="https://github.com/user-attachments/assets/cd29b601-2b15-4b7f-8976-81e762fdcd2c">
+      </td>
+      <td align="center">
+        <strong>Agent Installed on Ubuntu</strong><br>
+        <img width="300" alt="Agent Installed on Ubuntu" src="https://github.com/user-attachments/assets/03621103-adbc-4342-be99-a76b133c9e6e">
+      </td>
+      <td align="center">
+        <strong>Fleet Agent Added</strong><br>
+        <img width="300" alt="Fleet Agent Added" src="https://github.com/user-attachments/assets/7d7f705d-8967-47ee-a904-322ef8a94c87">
+      </td>
+      <td align="center">
+        <strong>Fleet Agent Added to Kibana</strong><br>
+        <img width="300" alt="Fleet Agent Added to Kibana" src="https://github.com/user-attachments/assets/a5c5fe4f-37e3-43c9-a4bd-47356d31e6ef">
+      </td>
+    </tr>
+  </table>
+</div>
+
+
