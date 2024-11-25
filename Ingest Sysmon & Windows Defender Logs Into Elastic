@@ -1,0 +1,76 @@
+# **Ingest Sysmon and Windows Defender Logs into Elasticsearch**
+
+This guide demonstrates how to configure and test the ingestion of **Sysmon** and **Windows Defender** logs into Elasticsearch using custom Windows event logs and integrations.
+
+---
+
+## **Step 1: Add Integrations**
+
+1. Navigate to the **Integrations** tab in the Elasticsearch GUI.
+2. Click on **Add integrations** to begin setting up custom Windows event logs.
+
+https://imgur.com/nFAsZRR
+
+---
+
+## **Step 2: Custom Windows Event Logs Setup (Sysmon Integration)**
+
+1. Add the **Sysmon** integration:
+   - **Integration Name**: `TechGneek-WIN-Sysmon`
+   - **Channel Name**: `Microsoft-Windows-Sysmon/Operational`
+   - Leave other options as default.
+2. Assign this integration to the existing host policy: `TechGneek-Windows-Policy`.
+3. Click **Save** and **Deploy changes**.
+
+---
+
+## **Step 3: Custom Windows Event Logs Setup (Windows Defender Integration)**
+
+1. Add the **Windows Defender** integration:
+   - **Integration Name**: `TechGneek-WIN-Defender`
+   - **Channel Name**: `Microsoft-Windows-Windows Defender/Operational`
+   - Under advanced options, add the specific event IDs: `1116, 1117, 5001`.
+2. Assign this integration to the existing host policy: `TechGneek-Windows-Policy`.
+3. Click **Save** and **Deploy changes**.
+
+https://imgur.com/tByd4Pb
+
+---
+
+## **Step 4: Testing Sysmon Logs**
+
+1. To validate Sysmon integration, run the following query in Elasticsearch:
+   - `winlog.event_id: 1` filtered by `event.provider: sysmon`.
+2. Verify that logs appear in the results.
+
+https://imgur.com/AW7YzC3
+
+---
+
+## **Step 5: Testing Windows Defender Logs**
+
+1. To validate Windows Defender integration, run the following query in Elasticsearch:
+   - `winlog.event_id: 5001` filtered by `event.provider: Microsoft-Windows-Windows Defender`.
+2. Verify that logs appear in the results.
+
+https://imgur.com/gjZDoYf
+
+---
+
+## **Step 6: Query Results**
+
+- After running the queries, ensure that the expected logs for both Sysmon and Windows Defender are visible in the Elasticsearch interface.
+
+https://imgur.com/VzONFpF
+
+---
+
+## **Step 7: Advanced Configuration**
+
+- Access advanced options to further customize the log settings or adjust policies for Sysmon and Windows Defender as needed.
+
+https://imgur.com/ZbcXyek
+
+---
+
+This guide ensures that you can successfully ingest and validate **Sysmon** and **Windows Defender** logs in Elasticsearch. If further troubleshooting or configurations are required, consult the Elasticsearch documentation or update your queries as needed.
