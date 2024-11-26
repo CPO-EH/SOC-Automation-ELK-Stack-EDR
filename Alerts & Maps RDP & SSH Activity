@@ -1,0 +1,134 @@
+# Monitoring SSH and RDP Brute Force Activity with Kibana
+
+This guide demonstrates how to configure **Kibana** to monitor authentication attempts, including **SSH Brute Force** and **RDP Brute Force** activities. You’ll learn how to build queries, create rules, visualize data, and integrate it all into a centralized dashboard.
+
+---
+
+## Prerequisites
+
+Ensure you have:
+1. **Elastic Stack** installed and running (Elasticsearch, Kibana, and Beats).
+2. Access to **Linux** and **Windows agents** with Elastic Agent installed.
+3. Basic knowledge of Kibana.
+
+---
+
+## Monitoring SSH Brute Force Attempts
+
+### Step 1: Build the SSH Query in Kibana
+1. Open **Kibana** and navigate to the **Discover** tab.
+2. Select `agent.name` and filter by your Linux server (e.g., **MYDFIR-Linux-TechGneek**).
+3. Add `system.auth.ssh.event` from the field names to the query.
+4. Include additional fields for telemetry:
+   - `user.name`
+   - `source.ip`
+   - `source.geo.country_name`
+5. Save this query as **SSH Failed Activity**.
+
+**Screenshot: Building the SSH Query**
+![SSH Query](https://imgur.com/oPNxulj)
+
+---
+
+### Step 2: Create an Alert for SSH Brute Force
+1. Navigate to **Security** → **Rules** → **Detection Rules (SIEM)** and create a new rule.
+2. Use the following settings:
+   - **Name:** `MYDFIR-SSH-Brute-Force-Attempt-TechGneek`
+   - **Query:** 
+     ```kql
+     system.auth.ssh.event : * AND agent.name: MYDFIR-Linux-TechGneek AND system.auth.ssh.event: Failed
+     ```
+   - **Group By:** `user.name` and `source.ip`
+   - **Threshold:** Count >= 5 in the last 5 minutes.
+
+**Screenshot: Creating the SSH Rule**
+![SSH Rule](https://imgur.com/FfcRhFM)
+
+---
+
+### Step 3: Visualize SSH Data in Maps
+1. Go to **Analytics** → **Maps**.
+2. Run the query:
+   ```kql
+   system.auth.ssh.event : * AND agent.name: MYDFIR-Linux-TechGneek AND system.auth.ssh.event: Failed
+   ```
+3. Add a layer:
+   - **Boundaries Source:** Administrative Boundaries → World Countries.
+   - **Statistic Source:** Current indices in Kibana.
+   - **Join Field:** `source.geo.country_iso_code`.
+4. Save the map as **SSH Failed Authentications**.
+
+**Screenshot: SSH Map**
+![SSH Map](https://imgur.com/9BwNxtg)
+
+---
+
+## Monitoring RDP Brute Force Attempts
+
+### Step 1: Build the RDP Query in Kibana
+1. Go to **Discover** in Kibana.
+2. Select `agent.name` and filter by your Windows server (e.g., **MYDFIR-WIN-TechGneek**).
+3. Add `event.code` and search for `4625` (Windows authentication failure).
+4. Include these fields:
+   - `user.name`
+   - `source.ip`
+   - `source.geo.country_name`
+5. Save this query as **RDP Failed Activity**.
+
+**Screenshot: Building the RDP Query**
+![RDP Query](https://imgur.com/AY0CL2x)
+
+---
+
+### Step 2: Create an Alert for RDP Brute Force
+1. Create a detection rule for RDP:
+   - **Name:** `MYDFIR-RDP-BruteForce-Activity-TechGneek`
+   - **Query:**
+     ```kql
+     event.code: 4625 AND agent.name: MYDFIR-WIN-TechGneek
+     ```
+   - **Group By:** `user.name` and `source.ip`
+   - **Threshold:** Count >= 5 in the last 5 minutes.
+
+**Screenshot: Creating the RDP Rule**
+![RDP Rule](https://imgur.com/W9GDe8I)
+
+---
+
+### Step 3: Visualize RDP Data in Maps
+1. Go to **Analytics** → **Maps**.
+2. Run the query:
+   ```kql
+   event.code: 4625 AND agent.name: MYDFIR-WIN-TechGneek
+   ```
+3. Add a layer:
+   - **Boundaries Source:** Administrative Boundaries → World Countries.
+   - **Statistic Source:** Current indices in Kibana.
+   - **Join Field:** `source.geo.country_iso_code`.
+4. Save the map as **RDP Failed Authentications**.
+
+**Screenshot: RDP Map**
+![RDP Map](https://imgur.com/W9GDe8I)
+
+---
+
+## Creating a Dashboard
+
+### Step 1: Add Visualizations
+1. Create a dashboard named **TechGneek-Authentication-Activity**.
+2. Add the following visualizations:
+   - **SSH Failed Authentications (Map).**
+   - **SSH Successful Authentications (Map).**
+   - **RDP Failed Authentications (Map).**
+   - **RDP Successful Authentications (Map).**
+
+**Screenshot: Final Dashboard**
+![Dashboard](https://imgur.com/9BwNxtg, https://imgur.com/tHvx0gY)
+
+---
+
+## Summary
+
+By following this guide, you’ve configured Kibana to monitor and visualize authentication attempts across Linux and Windows environments. This setup provides real-time insights into potential brute force attacks, making your infrastructure more secure.
+
+For additional details, visit the [TechGneek GitHub Repository](https://github.com/techgneek).
