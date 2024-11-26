@@ -219,6 +219,63 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [SSH Server Set Up & Elastic Agent Install](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Elastic%20Agent%20Install%20On%20SSH%20Server%20%26%20Log%20Authentication)
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Fleet Server Overview</strong><br>
+        <img width="300" alt="Fleet Server Overview" src="https://github.com/user-attachments/assets/8c5e7386-90cf-4c9e-bcd9-3c6f2d8aed3c">
+      </td>
+      <td align="center">
+        <strong>Fleet Server Policy Configuration</strong><br>
+        <img width="300" alt="Fleet Server Policy Configuration" src="https://github.com/user-attachments/assets/8ad18394-187c-444d-82c3-c0e421114b2e">
+      </td>
+      <td align="center">
+        <strong>Fleet Server Added</strong><br>
+        <img width="300" alt="Fleet Server Added" src="https://github.com/user-attachments/assets/b5edcbee-fb87-4a8f-b944-a83b773a326e">
+      </td>
+      <td align="center">
+        <strong>Kibana Fleet Settings</strong><br>
+        <img width="300" alt="Kibana Fleet Settings" src="https://github.com/user-attachments/assets/57fff73d-efd3-4036-aa67-22335bcff746">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Windows Fleet Agent Install</strong><br>
+        <img width="300" alt="Windows Fleet Agent Install" src="https://github.com/user-attachments/assets/10fded8c-372d-49bf-8dff-817fa6d09868">
+      </td>
+      <td align="center">
+        <strong>Agent Installed on Ubuntu</strong><br>
+        <img width="300" alt="Agent Installed on Ubuntu" src="https://github.com/user-attachments/assets/c5837e0d-7379-4d4a-9de1-506aff3e13cb">
+      </td>
+      <td align="center">
+        <strong>Fleet Agent Added</strong><br>
+        <img width="300" alt="Fleet Agent Added" src="https://github.com/user-attachments/assets/2d819431-0204-4516-85dc-ba5259f96d54">
+      </td>
+      <td align="center">
+        <strong>Fleet Agent Added to Kibana</strong><br>
+        <img width="300" alt="Fleet Agent Added to Kibana" src="https://github.com/user-attachments/assets/3b76d4ac-ed25-4fb6-b05f-eb77b8b4fb24">
+      </td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+      <td align="center">
+        <strong>Fleet Logs Overview</strong><br>
+        <img width="300" alt="Fleet Logs Overview" src="https://github.com/user-attachments/assets/9835e677-8669-457e-a1a2-bfcb587c01e3">
+      </td>
+      <td align="center">
+        <strong>Authentication Logs</strong><br>
+        <img width="300" alt="Authentication Logs" src="https://github.com/user-attachments/assets/d5937002-df30-4b0c-8794-86c1e3ee099c">
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
 
 
 
