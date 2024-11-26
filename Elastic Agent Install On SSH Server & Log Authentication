@@ -1,0 +1,73 @@
+#### **Setup SSH Server**
+- **OS:** Ubuntu 24.04  
+- **Public IP:** 140.82.12.65  
+- **Specifications:** 1 CPU, 1GB Memory, 25GB Storage  
+- **Hostname:** MYDFIR-Linux-Techgneek  
+
+Using this server to capture failed login attempts from across the internet and analyze logs in Kibana.
+
+---
+
+### **Install Elastic Agent and Monitor Authentication Logs**
+
+#### **Command History**
+```bash
+1  apt-get update && apt-get upgrade -y
+2  cd /var/log
+3  ls
+4  cat auth.log # View authentication attempts
+5  grep -i failed auth.log # Search for failed attempts
+6  grep -i failed auth.log | grep -i root # Filter for attempts targeting root
+7  grep -i failed auth.log | grep -i root | cut -d ' ' -f 9
+8  clear
+9  curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.15.2-linux-x86_64.tar.gz
+10 tar xzvf elastic-agent-8.15.2-linux-x86_64.tar.gz
+11 cd elastic-agent-8.15.2-linux-x86_64
+12 sudo ./elastic-agent install --url=https://149.28.237.158:8220 --enrollment-token=c1JKZlpKSUJKOGtFX3oxbGljMVI6c3BlelBJRGFUZ2FSZXlJaTVKNHowZw== --insecure
+```
+
+---
+
+### **Kibana Setup for Elastic Agent**
+1. **Navigate to Kibana Fleet Dashboard**
+   - Go to **Management** > **Fleet** > **Agent Policy** > **Create Agent Policy**
+2. **Agent Policy Configuration**
+   - **Policy Name:** TechGneek-Linux-Policy
+   - Add Integration: Monitor `/var/log/auth.log`
+3. **Enroll the Agent**
+   - Select **Enroll in Fleet** > Copy the command and run it on the SSH server.
+
+---
+
+### **Analyzing Logs in Kibana**
+1. **Verify Agent Connectivity**
+   - Query: `agent.name: MYDFIR-Linux-TechGneek`
+2. **Failed Authentication Query**
+   - Query: `message: "authentication failure"`
+   - Example IP analyzed: `92.255.85.253`
+
+---
+
+### **Images**
+#### **Fleet Policy Configuration**
+![Fleet Policy Configuration](https://imgur.com/f4a7LsA)
+
+#### **Elastic Agent Installed on Server**
+![Elastic Agent Installed](https://imgur.com/f4a7LsA)
+
+#### **Authentication Logs**
+![Authentication Logs](https://imgur.com/f8XT4Zb)
+
+#### **Query in Kibana**
+![Query in Kibana](https://imgur.com/MdF7WXm)
+
+#### **Log Details**
+![Log Details](https://imgur.com/VQKLvuu)
+
+---
+
+### **Key Findings**
+- Successfully monitored authentication logs on the SSH server.
+- Kibana displayed detailed data for failed login attempts, including IP addresses and login methods. 
+
+For detailed setup instructions and troubleshooting, check the full [GitHub Repository](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR).
