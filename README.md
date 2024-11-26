@@ -176,6 +176,49 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 </div>
 
 - [Ingest Sysmon and Windows Defender Logs into Elasticsearch](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Ingest%20Sysmon%20%26%20Windows%20Defender%20Logs%20Into%20Elastic)
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Add Integrations</strong><br>
+        <img width="300" alt="Add Integrations" src="https://github.com/user-attachments/assets/c595eb11-e9c3-409c-bf68-25cfb68fd3bd">
+      </td>
+      <td align="center">
+        <strong>Fleet Integration Overview</strong><br>
+        <img width="300" alt="Fleet Integration Overview" src="https://github.com/user-attachments/assets/4eabc9a0-45f8-40b5-a47b-a79665becbef">
+      </td>
+      <td align="center">
+        <strong>Fleet Server Added</strong><br>
+        <img width="300" alt="Fleet Server Added" src="https://github.com/user-attachments/assets/836e2168-0b92-4725-b36d-22da15bff408">
+      </td>
+      <td align="center">
+        <strong>Custom Windows Event Logs</strong><br>
+        <img width="300" alt="Custom Windows Event Logs" src="https://github.com/user-attachments/assets/facfa1f3-d38a-4092-8ade-11dda7d09b71">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Windows Event Log Details</strong><br>
+        <img width="300" alt="Windows Event Log Details" src="https://github.com/user-attachments/assets/c982f26c-5312-4cf6-81c1-5c08d32083a4">
+      </td>
+      <td align="center">
+        <strong>Fleet Server Policy</strong><br>
+        <img width="300" alt="Fleet Server Policy" src="https://github.com/user-attachments/assets/a47bc7c9-2b5d-4b65-a46f-3c3bb622dbe4">
+      </td>
+      <td align="center">
+        <strong>Integration Deployed to Hosts</strong><br>
+        <img width="300" alt="Integration Deployed to Hosts" src="https://github.com/user-attachments/assets/630721d1-2fea-4191-bafa-52a1e23aad5d">
+      </td>
+      <td align="center">
+        <strong>Final Deployment</strong><br>
+        <img width="300" alt="Final Deployment" src="https://github.com/user-attachments/assets/f353c590-4c8e-40d4-969d-514f3782c576">
+      </td>
+    </tr>
+  </table>
+</div>
+
 
 
 
