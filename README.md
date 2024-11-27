@@ -299,9 +299,35 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
         <strong>SSH Failed and Successful Attempts (Maps)</strong><br>
         <img width="300" alt="Final Dashboard" src="https://github.com/user-attachments/assets/d1f14c2b-4b2e-4af6-9623-0bb63d54287a">
       </td>
+      <td align="center">
+        <strong>SSH Failed Activity Query</strong><br>
+        <img width="300" alt="SSH Failed Activity Query" src="https://github.com/user-attachments/assets/d3ec7993-fb2f-4bab-9ddf-1831dc51a780">
+      </td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+      <td align="center">
+        <strong>Creating SSH Alert</strong><br>
+        <img width="300" alt="Creating SSH Rule" src="https://github.com/user-attachments/assets/5745d220-6c5f-434d-a764-1bd043ded295">
+      </td>
+      <td align="center">
+        <strong>SSH Failed Activity Rule</strong><br>
+        <img width="300" alt="RDP Failed Activity Query" src="https://github.com/user-attachments/assets/fdd6ca96-4f51-4286-9328-1cd2cb1f0616">
+      </td>
+      <td align="center">
+        <strong>Creating RDP Alert</strong><br>
+        <img width="300" alt="RDP Failed Authentications Map" src="https://github.com/user-attachments/assets/e02240b1-de94-4913-82ab-55291d552146">
+      </td>
+      <td align="center">
+        <strong>Failed RDP Alert</strong><br>
+        <img width="300" alt="Final Dashboard" src="https://github.com/user-attachments/assets/2ba3466e-cbbb-4843-81a5-1e5548d69ea5">
+      </td>
     </tr>
   </table>
 </div>
+
+
+
 
 
 
