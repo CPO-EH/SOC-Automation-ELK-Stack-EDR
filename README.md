@@ -263,6 +263,45 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Alerts & Maps RDP & SSH Activity](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Alerts%20%26%20Maps%20RDP%20%26%20SSH%20Activity)
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>SSH Failed Activity (Map)</strong><br>
+        <img width="300" alt="SSH Failed Activity Query" src="https://github.com/user-attachments/assets/09bf48b5-45dc-4702-97ad-a3ba5f1522b0">
+      </td>
+      <td align="center">
+        <strong>Creating RDP Alert</strong><br>
+        <img width="300" alt="Creating SSH Rule" src="https://github.com/user-attachments/assets/45559124-c115-4991-8b86-c37a841e4359">
+      </td>
+      <td align="center">
+        <strong>RDP Failed and Successful (Maps)</strong><br>
+        <img width="300" alt="SSH Failed Authentications Map" src="https://github.com/user-attachments/assets/b9c8fd85-60c5-48e5-a1e7-68dd886e8fd2">
+      </td>
+      <td align="center">
+        <strong>RDP Failed Activity Query</strong><br>
+        <img width="300" alt="RDP Failed Activity Query" src="https://github.com/user-attachments/assets/7e63d6a7-bd9b-4e18-9b9f-7873217bb870">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>SSH Bruteforce Attempt Rule</strong><br>
+        <img width="300" alt="Creating RDP Rule" src="https://github.com/user-attachments/assets/39811a22-f9f7-484e-9a3e-943a79cb171c">
+      </td>
+      <td align="center">
+        <strong>SSH Failed Activity Query</strong><br>
+        <img width="300" alt="RDP Failed Authentications Map" src="https://github.com/user-attachments/assets/3fae5e0d-a20e-4072-ac43-26c1d1f62fac">
+      </td>
+      <td align="center">
+        <strong>SSH Failed and Successful Attempts (Maps)</strong><br>
+        <img width="300" alt="Final Dashboard" src="https://github.com/user-attachments/assets/d1f14c2b-4b2e-4af6-9623-0bb63d54287a">
+      </td>
+    </tr>
+  </table>
+</div>
 
 
 
