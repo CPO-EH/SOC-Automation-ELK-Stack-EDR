@@ -363,11 +363,3 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
-
-
-
-
-
-
-
-
