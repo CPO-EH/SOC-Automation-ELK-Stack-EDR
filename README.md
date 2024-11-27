@@ -327,6 +327,7 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 </div>
 
 - [Mythic Server Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20Server%20Installation)
+  
   <div align="center">
   <table>
     <!-- Row 1 -->
