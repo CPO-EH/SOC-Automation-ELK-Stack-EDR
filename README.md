@@ -326,7 +326,41 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
-
+- [Mythic Server Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20Server%20Installation)
+  <div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Mythic Firewall Group</strong><br>
+        <img width="300" alt="Docker Install Command" src="https://github.com/user-attachments/assets/044687e7-6be7-4c22-a531-18194af6d412">
+      </td>
+      <td align="center">
+        <strong>Cloning Mythic Repository</strong><br>
+        <img width="300" alt="Cloning Mythic Repository" src="https://github.com/user-attachments/assets/5cee4461-0f1c-42cd-a3b5-864241451022">
+      </td>
+      <td align="center">
+        <strong>Starting Mythic Services</strong><br>
+        <img width="300" alt="Starting Mythic Services" src="https://github.com/user-attachments/assets/d5bbb30a-bdd4-4df9-be70-e02299eb43bf">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Retrieving Mythic Password</strong><br>
+        <img width="300" alt="Retrieving Mythic Password" src="https://github.com/user-attachments/assets/749b1bc3-31a1-4a2c-9afa-5b569007ad40">
+      </td>
+      <td align="center">
+        <strong>Mythic Server Port Listening</strong><br>
+        <img width="300" alt="Mythic Web GUI Login" src="https://github.com/user-attachments/assets/c1a1fbd7-6f77-4b3b-beff-82750f42ac6e">
+      </td>
+      <td align="center">
+        <strong>Mythic Server Deployment On Vultr Clound</strong><br>
+        <img width="300" alt="Mythic Web GUI Overview" src="https://github.com/user-attachments/assets/25398f66-33e6-41a4-85cd-b564971643e1">
+      </td>
+    </tr>
+  </table>
+</div>
 
 
 
