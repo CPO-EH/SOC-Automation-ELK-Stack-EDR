@@ -363,4 +363,57 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
-- [Mythic Server and Agent Setup (C2 Framework)](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20Server%20and%20Agent%20Setup) 
+- [Mythic Server and Agent Setup (C2 Framework)](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20Server%20and%20Agent%20Setup)
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Mythic Web GUI Login</strong><br>
+        <img width="300" alt="Mythic Web GUI Login" src="https://github.com/user-attachments/assets/b2f4d747-26f9-4d27-b753-e1e2f97b0b0f">
+      </td>
+      <td align="center">
+        <strong>Mythic Callback Interface</strong><br>
+        <img width="300" alt="Mythic Callback Interface" src="https://github.com/user-attachments/assets/fe45af7f-1ae4-4b96-b8cf-41b25ef3135a">
+      </td>
+      <td align="center">
+        <strong>Payload Configuration Overview</strong><br>
+        <img width="300" alt="Payload Configuration Overview" src="https://github.com/user-attachments/assets/012f8d6a-093e-46ce-8277-f6d9a4d37d27">
+      </td>
+      <td align="center">
+        <strong>Wordlist Preparation in Kali Linux</strong><br>
+        <img width="300" alt="Wordlist Preparation in Kali Linux" src="https://github.com/user-attachments/assets/3cebf6e8-1b55-446f-8933-7378aefa6146">
+      </td>
+      <td align="center">
+        <strong>RDP Brute Force Attack</strong><br>
+        <img width="300" alt="RDP Brute Force Attack" src="https://github.com/user-attachments/assets/288bd21e-6428-40aa-9652-0481204be1d7">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Accessing Windows Server</strong><br>
+        <img width="300" alt="Accessing Windows Server" src="https://github.com/user-attachments/assets/6133d6a0-5e31-4c39-8da2-fe7b545c3853">
+      </td>
+      <td align="center">
+        <strong>Password File Creation</strong><br>
+        <img width="300" alt="Password File Creation" src="https://github.com/user-attachments/assets/05800a7c-5ba1-4af4-b13c-c32ad0f38385">
+      </td>
+      <td align="center">
+        <strong>Windows Defender Disabled</strong><br>
+        <img width="300" alt="Windows Defender Disabled" src="https://github.com/user-attachments/assets/6e599524-e6d8-4cc6-aee8-8a0b80ff2565">
+      </td>
+      <td align="center">
+        <strong>File Download Using Mythic</strong><br>
+        <img width="300" alt="File Download Using Mythic" src="https://github.com/user-attachments/assets/92610211-cc68-4625-b978-cd6b6c253f07">
+      </td>
+      <td align="center">
+        <strong>Final Payload Execution</strong><br>
+        <img width="300" alt="Final Payload Execution" src="https://github.com/user-attachments/assets/e7981ac8-fcd0-480f-9447-3962f35a9037">
+      </td>
+    </tr>
+  </table>
+</div>
+
+
+
