@@ -527,48 +527,48 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
     <!-- Row 1 -->
     <tr>
       <td align="center">
-        <strong>API Key Setup in osTicket</strong><br>
-        <img width="300" alt="API Key Setup" src="https://github.com/user-attachments/assets/52ecc0c0-01a5-4bd7-9151-34665916274d">
+        <strong>Successful Webhook Test</strong><br>
+        <img width="300" alt="Successful Webhook Test" src="https://github.com/user-attachments/assets/10c3a9cf-44ef-484a-8308-1a518b8c2887">
       </td>
       <td align="center">
-        <strong>IP Configuration in ELK Stack</strong><br>
-        <img width="300" alt="IP Configuration" src="https://github.com/user-attachments/assets/d2ba815f-e9bf-49a9-a852-0003884a2ff4">
+        <strong>Private IP Configuration</strong><br>
+        <img width="300" alt="Private IP Configuration" src="https://github.com/user-attachments/assets/fc4961b7-c6ae-4cf1-8749-46ec5ad9c176">
       </td>
       <td align="center">
-        <strong>Webhook Setup in Kibana</strong><br>
-        <img width="300" alt="Webhook Setup" src="https://github.com/user-attachments/assets/e3601f8d-1fd2-4ebf-adeb-f29ffb932e00">
+        <strong>Ping Test Results</strong><br>
+        <img width="300" alt="Ping Test Results" src="https://github.com/user-attachments/assets/75c9c1dd-10fa-493f-ac18-8540342f3767">
+      </td>
+      <td align="center">
+        <strong>Overview of Completed Steps</strong><br>
+        <img width="300" alt="Overview of Completed Steps" src="https://github.com/user-attachments/assets/6549e86f-c205-4acd-b08d-e984e12e4d6b">
       </td>
     </tr>
     <!-- Row 2 -->
     <tr>
       <td align="center">
-        <strong>osTicket Network Adapter Settings</strong><br>
-        <img width="300" alt="Network Adapter Settings" src="https://github.com/user-attachments/assets/ae9de5ea-c04a-465e-8f7a-05d0923e3fd5">
+        <strong>osTicket Logs</strong><br>
+        <img width="300" alt="osTicket Logs" src="https://github.com/user-attachments/assets/a679bfa0-30f9-4cbd-b714-a7e07218403b">
       </td>
       <td align="center">
-        <strong>Ping Test Results</strong><br>
-        <img width="300" alt="Ping Test Results" src="https://github.com/user-attachments/assets/58a3678f-95c0-47d4-a718-091e8cc65b34">
-      </td>
-      <td align="center">
-        <strong>Webhook Test Success</strong><br>
-        <img width="300" alt="Webhook Test Success" src="https://github.com/user-attachments/assets/306e1d37-0ab5-48fb-9749-f2b4aeac271b">
-      </td>
-    </tr>
-    <!-- Row 3 -->
-    <tr>
-      <td align="center">
-        <strong>Successful Integration Overview</strong><br>
-        <img width="300" alt="Integration Overview" src="https://github.com/user-attachments/assets/92c7b2cf-f213-4b82-8cd2-9e8a13df8073">
+        <strong>osTicket API Key</strong><br>
+        <img width="300" alt="osTicket API Key" src="https://github.com/user-attachments/assets/3af757a3-05e9-4607-b018-44ed7284e97d">
       </td>
       <td align="center">
         <strong>Failed Webhook Test</strong><br>
-        <img width="300" alt="Webhook Test Failed" src="https://github.com/user-attachments/assets/29d0f63e-35a9-495a-8434-34f97721ff9c">
+        <img width="300" alt="Failed Webhook Test" src="https://github.com/user-attachments/assets/688bc4da-44b7-4c1c-b439-5fe262acfde6">
       </td>
       <td align="center">
-        <strong>Initial osTicket Configuration</strong><br>
-        <img width="300" alt="osTicket Initial Configuration" src="https://github.com/user-attachments/assets/c051cf5b-5351-4e92-bf94-b0ddc55d87e5">
+        <strong>Confirmed Successful IP Configuration</strong><br>
+        <img width="300" alt="Confirmed Successful IP Configuration" src="https://github.com/user-attachments/assets/b0006705-0fa1-492c-9c74-83c875a79592">
       </td>
     </tr>
   </table>
 </div>
+
+
+
+
+
+
+
 
