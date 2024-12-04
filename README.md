@@ -468,4 +468,55 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [osTicket Setup & Configuration](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/osTicket%20Setup%20%26%20Configuration)
+
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Downloading osTicket</strong><br>
+        <img width="300" alt="Downloading osTicket" src="https://github.com/user-attachments/assets/babba31f-b078-49fb-8612-5809afec272c">
+      </td>
+      <td align="center">
+        <strong>Configuring XAMPP</strong><br>
+        <img width="300" alt="Configuring XAMPP" src="https://github.com/user-attachments/assets/a4840f44-65f2-4472-96d6-0a6d8e3e1e0d">
+      </td>
+      <td align="center">
+        <strong>Editing phpMyAdmin Configuration</strong><br>
+        <img width="300" alt="Editing phpMyAdmin Configuration" src="https://github.com/user-attachments/assets/7484620d-55c6-4313-897d-ccb0fcc159c6">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Firewall Configuration</strong><br>
+        <img width="300" alt="Firewall Configuration" src="https://github.com/user-attachments/assets/bca1580c-761b-48b0-9d09-b39564a11d4f">
+      </td>
+      <td align="center">
+        <strong>phpMyAdmin Database Setup</strong><br>
+        <img width="300" alt="phpMyAdmin Database Setup" src="https://github.com/user-attachments/assets/20105baf-b7a7-4e57-9046-d63d58ccd726">
+      </td>
+      <td align="center">
+        <strong>osTicket Initial Setup</strong><br>
+        <img width="300" alt="osTicket Initial Setup" src="https://github.com/user-attachments/assets/72710660-78d0-4f08-be71-dde1dfe56a3b">
+      </td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+      <td align="center">
+        <strong>Renaming Configuration File</strong><br>
+        <img width="300" alt="Renaming Configuration File" src="https://github.com/user-attachments/assets/9fa1b853-18a1-41ea-aa57-19ec928643bc">
+      </td>
+      <td align="center">
+        <strong>osTicket Installation Completed</strong><br>
+        <img width="300" alt="osTicket Installation Completed" src="https://github.com/user-attachments/assets/7e9b6423-8c88-4e5a-adaa-1b16f38f8678">
+      </td>
+      <td align="center">
+        <strong>Final osTicket Dashboard</strong><br>
+        <img width="300" alt="Final osTicket Dashboard" src="https://github.com/user-attachments/assets/35b65f75-bb69-4dca-96c5-85b24c0dd653">
+      </td>
+    </tr>
+  </table>
+</div>
 
