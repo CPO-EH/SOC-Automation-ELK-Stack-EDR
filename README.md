@@ -617,4 +617,56 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Investigate RDP Brute Force Attack](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Investigate%20RDP%20Brute%20Force%20Attack)
+
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>RDP Detection Alert for IP 91.238.181.40</strong><br>
+        <img width="300" alt="RDP Detection Alert for IP 91 238 181 40" src="https://github.com/user-attachments/assets/67c0be48-b927-4d01-a3f1-e4dd24adcdd1">
+      </td>
+      <td align="center">
+        <strong>Overview of Alerts</strong><br>
+        <img width="300" alt="Overview of Alerts" src="https://github.com/user-attachments/assets/ffde1dd2-3b90-4e83-ae20-94ce7d790dde">
+      </td>
+      <td align="center">
+        <strong>Webhook Test</strong><br>
+        <img width="300" alt="Webhook Test" src="https://github.com/user-attachments/assets/7cabb9ce-092a-419d-9c60-15e2343b9261">
+      </td>
+      <td align="center">
+        <strong>Network Activity for Potential Malicious IP 91.238.181.40</strong><br>
+        <img width="300" alt="Network Activity For Potential Malicious IP 91 238 181 40" src="https://github.com/user-attachments/assets/19149997-b484-4a45-aa4a-a8434f68e5ee">
+      </td>
+      <td align="center">
+        <strong>1. AbuseIPDB (OSINT) for Potential Malicious IP 91.238.181.40</strong><br>
+        <img width="300" alt="1  AbuseIPDB (OSINT) for potential Malicious IP 91 238 181 40" src="https://github.com/user-attachments/assets/b55a7f2d-d95c-462e-a7e3-ef67345f00b0">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>2. AbuseIPDB (OSINT) for Potential Malicious IP 91.238.181.40</strong><br>
+        <img width="300" alt="2  AbuseIPDB (OSINT) for potential Malicious IP 91 238 181 40" src="https://github.com/user-attachments/assets/caa2229d-ba76-4abe-999d-a75489633da5">
+      </td>
+      <td align="center">
+        <strong>Auto-Generated Alert in osTicket From Kibana</strong><br>
+        <img width="300" alt="Auto-Generated Alert in osTicket From Kibana" src="https://github.com/user-attachments/assets/a4e79c5a-e031-41ac-8177-defeb3505461">
+      </td>
+      <td align="center">
+        <strong>Assigning Ticket to Agent</strong><br>
+        <img width="300" alt="Assigning Ticket to Agent" src="https://github.com/user-attachments/assets/1ac80165-2ba3-45b6-9866-4e3f9bc2dba4">
+      </td>
+      <td align="center">
+        <strong>Agent Responding to Ticket</strong><br>
+        <img width="300" alt="Agent Responding to Ticket" src="https://github.com/user-attachments/assets/0b7ba4d1-3fbd-4e19-aa0f-db56995cec08">
+      </td>
+      <td align="center">
+        <strong>Open Ticket Resolved by Agent</strong><br>
+        <img width="300" alt="Open Ticket Resolved by Agent" src="https://github.com/user-attachments/assets/94c75a9e-a041-42da-a2f7-ff6877fdbf8f">
+      </td>
+    </tr>
+  </table>
+</div>
 
