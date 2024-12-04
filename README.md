@@ -565,10 +565,56 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Investigat SSH Brute Force Attack](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Investigate%20SSH%20Brute%20Force%20Attack)
 
-
-
-
-
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Rule Investigation For Potential Malicious IP</strong><br>
+        <img width="300" alt="Rule Investigation For Potential Malicious IP (159 65 147 193)" src="https://github.com/user-attachments/assets/45813a34-2255-46e7-901c-6bfd398c45d5">
+      </td>
+      <td align="center">
+        <strong>Network Activity For Potential Malicious IP</strong><br>
+        <img width="300" alt="Network Activity For Potential Malicious IP 159 65 147 193" src="https://github.com/user-attachments/assets/92f6e4c3-67b8-4a53-b0bb-a8053bea306e">
+      </td>
+      <td align="center">
+        <strong>AbuseIPDB (OSINT) IP Investigation</strong><br>
+        <img width="300" alt="AbuseIPBD (OSINT) IP Investigation" src="https://github.com/user-attachments/assets/9b1d7d76-1157-4000-bb2a-c37685a00fc3">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>GreyNoise (OSINT) IP Investigation</strong><br>
+        <img width="300" alt="GreyNoise (OSINT) IP Investigation" src="https://github.com/user-attachments/assets/a04d2c7c-616d-48d1-853c-0f66edc7fcd1">
+      </td>
+      <td align="center">
+        <strong>Alert Auto-Generated In osTicket</strong><br>
+        <img width="300" alt="Alert Auto-Generated In osTicked From Elastic" src="https://github.com/user-attachments/assets/609a2065-b896-4f44-97df-0ff4e397c874">
+      </td>
+      <td align="center">
+        <strong>Updated server.publicBaseUrl in Kibana YML File</strong><br>
+        <img width="300" alt="Updated  server publicBaseUrl  in Kibana YML file" src="https://github.com/user-attachments/assets/56847923-8c21-4c15-86fd-ad1be990f075">
+      </td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+      <td align="center">
+        <strong>Assigning Ticket to Agent</strong><br>
+        <img width="300" alt="Assigning Ticket To Agent" src="https://github.com/user-attachments/assets/bcc8c2f8-b9bb-479e-97a4-b40c0d432c0d">
+      </td>
+      <td align="center">
+        <strong>Agent Responding to Open Ticket</strong><br>
+        <img width="300" alt="Agent Responding to Open Ticket on osTicket GUI" src="https://github.com/user-attachments/assets/0ce32c1c-1dc7-4447-bacd-c2f0cd4b3356">
+      </td>
+      <td align="center">
+        <strong>Agent Responding to Resolved Ticket</strong><br>
+        <img width="300" alt="Agent Responding To Open ticket  Resolved" src="https://github.com/user-attachments/assets/9fcb16f6-bf02-47c6-975a-64c446c4f869">
+      </td>
+    </tr>
+  </table>
+</div>
 
 
