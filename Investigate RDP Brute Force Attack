@@ -1,0 +1,68 @@
+# Investigate RDP Brute Force Attack
+
+This documentation outlines the steps to investigate an **RDP Brute Force Attack** alert using the Elastic Stack and integrate it with osTicket for ticket creation and resolution.
+
+---
+
+## Step 1: Initial Investigation in Kibana
+1. Navigate to your **Kibana Web GUI**.
+2. Go to the menu and click on **Alerts** under the **Security** section.
+3. Select the **first alert** to review its details and description.
+
+**Rule Description:**
+- **Rule:** Detects failed authentication attempts towards the account: **Administrator** via RDP.
+- **Alert Reason:**  
+   Event from source IP **91.238.181.40** targeting **Administrator** triggered a **medium alert**: `MYDFIR-RDP-Brute-Force-Attempt-TechGneek`.
+
+---
+
+## Step 2: OSINT Research
+Use **Open Source Intelligence (OSINT)** tools like [AbuseIPDB](https://www.abuseipdb.com) and [GreyNoise](https://www.greynoise.io) to research the suspicious IP **91.238.181.40**.
+
+**Key Investigation Points:**
+- **Brute Force RDP - 91.238.181.40 - Admin**
+  - **Is this IP known to perform brute force activity?**  
+    **Yes.**
+  - **Any other users affected by this IP?**  
+    **Yes:** `Admin`, `Administrator`, `Network Services`.
+  - **Were any of the attempts successful?**  
+    **No.**
+  - **If so, what activity occurred after the successful login?**  
+    **Nothing.**
+
+---
+
+## Step 3: Modify the Elastic Alert
+To integrate the alert with **osTicket**:
+1. Navigate to the **Rules** section in Elastic Security.  
+2. Select the rule for **RDP Bruteforce Attempt** and click on **Edit Rule Settings**.  
+3. Add an **Action** to push the rule to **osTicket**:
+   - Configure the alert to send relevant details to osTicket for ticket generation.
+
+---
+
+## Step 4: Verify Alert in osTicket
+- Open the **osTicket Web GUI** to confirm the alert was received.
+- Ensure the alert includes all relevant details for investigation.
+
+---
+
+## Step 5: Assign and Resolve the Ticket
+1. Assign the ticket to an agent in the osTicket GUI.
+2. Document your investigation steps and findings.
+3. Mark the ticket as **Resolved** and close it.
+
+---
+
+## Example Ticket Message
+```plaintext
+Please investigate the rule: MYDFIR-RDP-Brute-Force-Attempt-TechGneek  
+Context: Investigations Fields  
+Link:  
+http://149.28.235.88:5601/app/security/detections/rules/id/e6b8c7f9-e009-43f6-9296-236e552a61ef?timerange=(global:(linkTo:!(timeline),timerange:(from:1730480351624,kind:absolute,to:1730480415045)),timeline:(linkTo:!(global),timerange:(from:1730480351624,kind:absolute,to:1730480415045)))
+```
+
+---
+
+## Summary
+This process enables automated handling of RDP brute force alerts, ensuring that each event is logged, analyzed, and resolved efficiently. By integrating Elastic alerts with osTicket, you create a streamlined incident response workflow.
