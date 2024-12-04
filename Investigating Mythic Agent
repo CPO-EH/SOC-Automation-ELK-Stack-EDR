@@ -1,0 +1,50 @@
+### Documentation: Investigate Mythic Agent
+
+This section documents the investigation of a Mythic agent using Elastic and Kibana. The process involves analyzing suspicious network connections and event logs from a Windows server. Below are the step-by-step details and queries used during the investigation:
+
+---
+
+#### Investigation Steps:
+
+1. **Discover Mythic Agent Logs**  
+   Navigate to the Elastic menu and use the `Discover` tab to search for `svchost-techgneek.exe`. Confirm that the log is visible on the Windows server.
+
+2. **Analyze Network Connections in Dashboards**  
+   Go to `Dashboards` in the Elastic menu and select `TechGneek-Suspicious-Activity`.  
+   Within the dashboard, focus on **Process Initiated Network Connections** and investigate the following:  
+   - **Image:** `C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe`  
+   - **Destination IP:** `149.28.236.144`  
+   - **Source IP:** `107.191.42.102`  
+   - **Destination Port:** `9999`
+
+3. **Query Network Connections**  
+   Use the following query to analyze network activity:
+   ```plaintext
+   event.code: 3 AND winlog.event_data.DestinationIp: 149.28.236.144
+   ```
+
+4. **Timeline of Network Connections**  
+   Event details:  
+   - **File:** `svchost-techgneek.exe`  
+   - **File SHA1:** `97131E43F12221DE35E2B84A7763D7CC9641A5BA`  
+   - **Process ID (PID):** `8096`  
+
+   | Timestamp                 | Event Description                                   |
+   |---------------------------|-----------------------------------------------------|
+   | Oct 23, 2024 @ 21:32:55   | Network connection towards `149.28.236.144`.        |
+   | Oct 23, 2024 @ 21:32:54   | File created: `svchost-techgneek.exe`.              |
+   | Oct 23, 2024 @ 21:35:34   | Process created: `svchost-techgneek.exe`.           |
+   | Oct 23, 2024 @ 21:41:45   | Network connection.                                 |
+   | Oct 23, 2024 @ 21:47:27   | Network connection.                                 |
+
+5. **Analyze Process GUID**  
+   Query the `ProcessGuid` to identify related events:
+   ```plaintext
+   winlog.event_data.ProcessGuid: "{2b79f8d1-a114-6719-441e-000000000500}"
+   ```
+   - Result: Target filename identified as `C:\Users\Public\Downloads\svchost-techgneek.exe`.
+
+6. **Re-run File for Testing**  
+   - Encountered an issue where `svchost-techgneek.exe` was missing.  
+   - Re-downloaded the file, renamed it to `techgneek-30.exe`, and re-ran it on the Windows server.  
+   - The event was successfully logged in Elastic.
