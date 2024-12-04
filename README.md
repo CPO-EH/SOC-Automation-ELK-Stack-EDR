@@ -670,3 +670,78 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Investigating Mythic Agent](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Investigating%20Mythic%20Agent)
+
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Mythic C2 Detection Rule</strong><br>
+        <img width="300" alt="Mythic C2 Detection Rule" src="https://github.com/user-attachments/assets/dfafd845-f3e0-4a91-bef4-9438021ff7a7">
+      </td>
+      <td align="center">
+        <strong>Query Search for svchost-techgneek.exe</strong><br>
+        <img width="300" alt="Query Search for  svchost-techgneek exe  on Windows Server" src="https://github.com/user-attachments/assets/46a404e1-2d04-4ef9-a1bf-050fb0abb042">
+      </td>
+      <td align="center">
+        <strong>Process Initiated Network Connections</strong><br>
+        <img width="300" alt="Process Initiated Network Connections Overview" src="https://github.com/user-attachments/assets/73992c3a-bf85-4c0d-aab0-ee3339b58557">
+      </td>
+      <td align="center">
+        <strong>Elastic Query for PID 8096</strong><br>
+        <img width="300" alt="Elastic Query for Winlog ProcessID 8096" src="https://github.com/user-attachments/assets/a7a5972c-15e2-4834-835a-37f486a8f64f">
+      </td>
+      <td align="center">
+        <strong>Downloading techgneek-30.exe</strong><br>
+        <img width="300" alt="Downloading techgneek-30 exe file on Windows Server via Port 9999" src="https://github.com/user-attachments/assets/5f969779-aaf3-416f-95f7-2a293e2f96dc">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Renaming svchost-techgneek to techgneek-30</strong><br>
+        <img width="300" alt="Renaming svchost-techgneek to techgneek-30" src="https://github.com/user-attachments/assets/0809b1e3-9992-4567-8e11-4284879366fb">
+      </td>
+      <td align="center">
+        <strong>File Created (ProcessGuid)</strong><br>
+        <img width="300" alt="File Created (ProcessGuid) for svchost-techgneek " src="https://github.com/user-attachments/assets/20f02afa-1b6d-4d25-b1e6-a93ef7c058ca">
+      </td>
+      <td align="center">
+        <strong>Kibana Search for passwords.txt</strong><br>
+        <img width="300" alt="Kibana Search for  passwords txt  file on Windows Server" src="https://github.com/user-attachments/assets/927edb87-f98c-47cc-a404-2dfd501a09d9">
+      </td>
+      <td align="center">
+        <strong>Auto-Generated Ticket</strong><br>
+        <img width="300" alt="Ticket Auto-Generated in osTicket from Detected Mythic C2 Alert in Kibana" src="https://github.com/user-attachments/assets/eeeda819-6cf5-4762-9023-d228625d8e76">
+      </td>
+      <td align="center">
+        <strong>Query For Event Code 3</strong><br>
+        <img width="300" alt="Query For Event Code 3 and Winlog Destination IP 149 28 236 144" src="https://github.com/user-attachments/assets/c37fb1d3-0b58-4d97-bcaf-a39c2b4b2f32">
+      </td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+      <td align="center">
+        <strong>Mythic GUI Payload Overview</strong><br>
+        <img width="300" alt="Mythic GUI Payload Overview" src="https://github.com/user-attachments/assets/449a141f-6335-4861-9fb5-f307e8477976">
+      </td>
+      <td align="center">
+        <strong>Process Created (ProcessGuid)</strong><br>
+        <img width="300" alt="Process Created (ProcessGuid) for svchost-techgneek" src="https://github.com/user-attachments/assets/aead43af-c656-49d3-8676-ad480a0947a5">
+      </td>
+      <td align="center">
+        <strong>Query for techgneek-30.exe</strong><br>
+        <img width="300" alt="Query to detect  techgneek-30 exe  on Windows Server" src="https://github.com/user-attachments/assets/ea2a277a-82a6-42f3-8f31-b58897e7ae74">
+      </td>
+      <td align="center">
+        <strong>Mythic Server Listening</strong><br>
+        <img width="300" alt="Mythic Server Listening on Port 9999" src="https://github.com/user-attachments/assets/66432cef-30b0-41ee-a154-3f2039519521">
+      </td>
+      <td align="center">
+        <strong>Screen Shot: Timeline</strong><br>
+        <img width="300" alt="Screen Shot 2024-11-19 at 10 19 42 PM" src="https://github.com/user-attachments/assets/954be1b4-ca47-4574-878a-b632610e8486">
+      </td>
+    </tr>
+  </table>
+</div>
