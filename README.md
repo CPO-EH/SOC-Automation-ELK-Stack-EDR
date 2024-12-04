@@ -475,7 +475,7 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
     <!-- Row 1 -->
     <tr>
       <td align="center">
-        <strong>Downloading osTicket</strong><br>
+        <strong>Downloading XAMPP for osTicket Config</strong><br>
         <img width="300" alt="Downloading osTicket" src="https://github.com/user-attachments/assets/babba31f-b078-49fb-8612-5809afec272c">
       </td>
       <td align="center">
