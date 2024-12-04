@@ -1,0 +1,36 @@
+### Elastic Defend (Endpoint, Detection & Response) Setup
+
+This section outlines the steps taken to set up and test Elastic Defend for endpoint detection and response (EDR). The integration was configured to detect, quarantine, and isolate malicious activities, and the telemetry was analyzed in Elastic.
+
+---
+
+#### Setup and Testing Steps:
+
+1. **Add Elastic Defend Integration**
+   - Open the Elastic menu and scroll to **Integrations**.
+   - Select **Elastic Defend** and click **Add Elastic Defend Integration**.
+   - Configure the integration with the following settings:
+     - **Name:** TechGneek-EDR
+     - **Environment:** Traditional Endpoints
+     - **Integration Type:** Complete EDR
+     - **Host Environment:** Windows Server
+
+2. **Manage Endpoints**
+   - Navigate to **Menu > Security > Manage > Endpoints** to manage the configured EDR.
+
+3. **Test Malware Detection and Quarantine**
+   - On the Windows server, download `techgneek-30.exe`.
+   - Elastic Defend successfully detected and quarantined the malware, and the host was isolated from the server.
+
+4. **Analyze Telemetry and Logs**
+   - Open Elastic and run a search query for `malware` to examine the telemetry of the detected event.
+   - Navigate to **Menu > Security > Alerts** and review the **Malware Prevention Alert** for detailed telemetry.
+
+5. **Overview of Detection**
+   - The alert provided specific details about the execution of the rule and the response of Elastic Defend.
+
+---
+
+### End of Documentation
+
+This file outlines the complete setup and testing process for Elastic Defend EDR, demonstrating its capability to detect, quarantine, and isolate threats effectively.
