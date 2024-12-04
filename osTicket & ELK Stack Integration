@@ -1,0 +1,89 @@
+# osTicket + ELK Integration
+
+## Objective
+Integrate osTicket with the ELK stack and test alerts to osTicket.
+
+---
+
+## Steps for Integration
+
+### 1. Generate an API Key in osTicket
+1. Log into the osTicket GUI.
+2. Navigate to **Admin > Manage > API**.
+3. Click **Add New API Key**.
+4. Enter the VPC IP of the ELK stack (e.g., `172.31.0.3`).
+5. Select the **Can Create Tickets** option.
+6. Click **Add Key** to generate the API key.
+7. Copy the generated API key (e.g., `ABBA88EDA2608291971121EDD149A209`) to a secure location (e.g., Notepad).
+
+---
+
+### 2. Configure Webhook in Kibana
+1. Log into Kibana.
+2. Navigate to **Management > Stack Management > Connectors** under **Alerts and Insights**.
+3. Click **Create Connector**.
+4. Select **Webhook** and configure it as follows:
+   - **Connector Name**: `osTicket`
+   - **Connector Settings**:
+     - **Method**: POST
+     - **URL**: `http://64.176.209.7/osticket/upload/api/tickets.xml`
+   - **Authentication**: None
+   - Check **Add HTTP Header**:
+     - **Key**: `API-Key`
+     - **Value**: `ABBA88EDA2608291971121EDD149A209`
+5. Click **Save and Test**.
+
+---
+
+### 3. Troubleshoot Webhook Connection
+If the webhook test fails:
+1. Ping the osTicket private IP from the ELK stack server:
+   ```bash
+   ping 172.31.0.5
+   ```
+2. If the ping fails, ensure the osTicket server has the correct private IP.
+
+---
+
+### 4. Update osTicket Server Network Configuration
+1. Remote Desktop (RDP) into the osTicket server.
+2. Open Command Prompt with administrator privileges and run:
+   ```bash
+   ipconfig
+   ```
+3. If the private IP is missing:
+   - Go to **Control Panel > Network and Internet > Network and Sharing Center**.
+   - Click **Change adapter settings**.
+   - Identify the network adapter (e.g., Network Adapter 2) with the incorrect IP.
+   - Right-click on the adapter and select **Properties**.
+   - Double-click **Internet Protocol Version 4 (TCP/IPv4)** and update the settings:
+     - **IP Address**: `172.31.0.5`
+     - **Subnet Mask**: `255.255.255.0`
+   - Save the changes.
+4. Run `ipconfig` again to confirm the private IP.
+
+---
+
+### 5. Test Webhook Integration
+1. From the ELK stack server, run:
+   ```bash
+   ping 172.31.0.5
+   ```
+   Ensure the connection is successful.
+2. Return to Kibana and rerun the webhook test.
+3. Confirm the test is successful.
+
+---
+
+## Images
+| Step | Description | Screenshot |
+|------|-------------|------------|
+| 1 | API Key Generation in osTicket | ![API Key](https://github.com/user-attachments/assets/35b65f75-bb69-4dca-96c5-85b24c0dd653) |
+| 2 | Webhook Configuration in Kibana | ![Webhook Config](https://github.com/user-attachments/assets/7e9b6423-8c88-4e5a-adaa-1b16f38f8678) |
+| 3 | Ping Test Results | ![Ping Results](https://github.com/user-attachments/assets/72710660-78d0-4f08-be71-dde1dfe56a3b) |
+| 4 | Successful Webhook Test | ![Webhook Test Success](https://github.com/user-attachments/assets/7484620d-55c6-4313-897d-ccb0fcc159c6) |
+
+---
+
+### Conclusion
+After completing these steps, osTicket is successfully integrated with the ELK stack. You can now send alerts from Kibana to osTicket.
