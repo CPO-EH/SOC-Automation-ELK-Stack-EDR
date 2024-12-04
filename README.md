@@ -746,7 +746,7 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
-- [Elastic Defend (EDR) Setup and Response]()
+- [Elastic Defend (EDR) Setup and Response](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Elastic%20Defend%20(EDR)%20Setup)
 
 <div align="center">
   <table>
