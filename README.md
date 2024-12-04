@@ -520,3 +520,55 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [osTicket & ELK Stack Integration](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/osTicket%20%26%20ELK%20Stack%20Integration)
+
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>API Key Setup in osTicket</strong><br>
+        <img width="300" alt="API Key Setup" src="https://github.com/user-attachments/assets/52ecc0c0-01a5-4bd7-9151-34665916274d">
+      </td>
+      <td align="center">
+        <strong>IP Configuration in ELK Stack</strong><br>
+        <img width="300" alt="IP Configuration" src="https://github.com/user-attachments/assets/d2ba815f-e9bf-49a9-a852-0003884a2ff4">
+      </td>
+      <td align="center">
+        <strong>Webhook Setup in Kibana</strong><br>
+        <img width="300" alt="Webhook Setup" src="https://github.com/user-attachments/assets/e3601f8d-1fd2-4ebf-adeb-f29ffb932e00">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>osTicket Network Adapter Settings</strong><br>
+        <img width="300" alt="Network Adapter Settings" src="https://github.com/user-attachments/assets/ae9de5ea-c04a-465e-8f7a-05d0923e3fd5">
+      </td>
+      <td align="center">
+        <strong>Ping Test Results</strong><br>
+        <img width="300" alt="Ping Test Results" src="https://github.com/user-attachments/assets/58a3678f-95c0-47d4-a718-091e8cc65b34">
+      </td>
+      <td align="center">
+        <strong>Webhook Test Success</strong><br>
+        <img width="300" alt="Webhook Test Success" src="https://github.com/user-attachments/assets/306e1d37-0ab5-48fb-9749-f2b4aeac271b">
+      </td>
+    </tr>
+    <!-- Row 3 -->
+    <tr>
+      <td align="center">
+        <strong>Successful Integration Overview</strong><br>
+        <img width="300" alt="Integration Overview" src="https://github.com/user-attachments/assets/92c7b2cf-f213-4b82-8cd2-9e8a13df8073">
+      </td>
+      <td align="center">
+        <strong>Failed Webhook Test</strong><br>
+        <img width="300" alt="Webhook Test Failed" src="https://github.com/user-attachments/assets/29d0f63e-35a9-495a-8434-34f97721ff9c">
+      </td>
+      <td align="center">
+        <strong>Initial osTicket Configuration</strong><br>
+        <img width="300" alt="osTicket Initial Configuration" src="https://github.com/user-attachments/assets/c051cf5b-5351-4e92-bf94-b0ddc55d87e5">
+      </td>
+    </tr>
+  </table>
+</div>
+
