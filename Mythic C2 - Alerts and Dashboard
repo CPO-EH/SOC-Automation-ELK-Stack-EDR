@@ -1,0 +1,131 @@
+Here’s a ready-to-use GitHub Markdown version of your "Mythic C2 - Alerts & Dashboard" documentation:
+
+```markdown
+# Mythic C2 - Alerts & Dashboard
+
+## Overview
+This project focuses on leveraging Kibana to detect and monitor Mythic C2 activity using custom alerts, queries, and dashboards. The following steps outline how to search for suspicious activity, create alerts for process creation events, and build visualizations in an Elastic dashboard.
+
+---
+
+## Step 1: Search for svchost-techgneek.exe Logs
+1. **Login** to the Kibana GUI.
+2. Search for the `svchost-techgneek.exe` payload that was created in Mythic and downloaded onto the Windows server.
+3. Verify the presence of new logs associated with this file.
+4. Refine the search with `event.code: 1` to identify **process creation events**.
+5. Review details such as:
+   - **SHA1/SHA256 hash values**
+   - **OriginalFileName**: `Apollo.exe`
+
+---
+
+## Step 2: OSINT on Hash Files
+- Take the **SHA256 hash** from the logs and search it on platforms like [VirusTotal](https://www.virustotal.com).
+- Example query in Kibana:
+  ```kql
+  event.code: 1 and (winlog.event_data.Hashes: *686BD192172661EBE8B1C61608AE590E20F4685F02E7547793AEF78F90A6FD7B* or winlog.event_data.OriginalFileName: Apollo.exe)
+  ```
+- Save the refined search as **`Mythic-Apollo-Process-Create`**.
+
+---
+
+## Step 3: Create an Alert for Mythic C2
+### **Alert Definition**
+- **Index Patterns**:
+  ```
+  apm-*-transaction*
+  auditbeat-*
+  endgame-*
+  filebeat-*
+  logs-*
+  packetbeat-*
+  traces-apm*
+  winlogbeat-*
+  -*elastic-cloud-logs-*
+  ```
+- **Custom Query**:
+  ```kql
+  event.code: 1 and (winlog.event_data.Hashes: *686BD192172661EBE8B1C61608AE590E20F4685F02E7547793AEF78F90A6FD7B* or winlog.event_data.OriginalFileName: Apollo.exe)
+  ```
+- **Rule Type**: Query
+- **Required Fields**:
+  ```
+  winlog.event_data.User,
+  winlog.event_data.ParentImage,
+  @timestamp,
+  winlog.event_data.ParentCommandLine,
+  winlog.event_data.Image,
+  winlog.event_data.CommandLine,
+  winlog.event_data.CurrentDirectory,
+  ```
+
+Save the alert as **`Mythic C2 Apollo Detection`**.
+
+---
+
+## Step 4: Create a Dashboard
+1. **Event ID: 3 - Network Connections**
+   - Detect processes initiating **outbound network connections**.
+   - Required Fields:
+     ```
+     winlog.event_data.Image,
+     winlog.event_data.DestinationIp,
+     winlog.event_data.SourceIp,
+     winlog.event_data.DestinationPort
+     ```
+
+2. **Event ID: 1 - Process Creates**
+   - Monitor suspicious processes such as `powershell`, `cmd`, and `rundll32`.
+   - Query:
+     ```kql
+     event.code: 1 and event.provider: Microsoft-Windows-Sysmon and (powershell or cmd or rundll32)
+     ```
+
+3. **Event ID: 5001 - Microsoft Defender Disabled**
+   - Track any events where Microsoft Defender is disabled.
+   - Query:
+     ```kql
+     event.code: 5001 and event.provider: Microsoft-Windows-Windows Defender
+     ```
+
+4. **Dashboard Visualizations**:
+   - Create three separate visualizations based on the above queries.
+   - Combine them into a single dashboard named **`TechGneek-Suspicious-Activity`**.
+
+---
+
+## Step 5: Visualizations
+Below are the visualizations created in Kibana for monitoring Mythic C2 activity.
+
+https://imgur.com/a/mythic-c2-alerts-dashboard-TfaAy0P
+
+---
+
+## Step 6: Dashboard Queries
+The following queries were used to create the dashboard visualizations:
+
+1. **Event ID: 3 - Network Connections**
+   ```kql
+   event.code: 3 and event.provider: Microsoft-Windows-Sysmon and winlog.event_data.Initiated: true
+   ```
+
+2. **Event ID: 1 - Process Creates**
+   ```kql
+   event.code: 1 and event.provider: Microsoft-Windows-Sysmon and (powershell or cmd or rundll32)
+   ```
+
+3. **Event ID: 5001**
+   ```kql
+   event.code: 5001 and event.provider: Microsoft-Windows-Windows Defender
+   ```
+
+---
+
+## Final Output
+The finalized dashboard, **`TechGneek-Suspicious-Activity`**, provides insights into Mythic C2 activity, including:
+- Suspicious process creation events.
+- Outbound network connections.
+- Critical system changes, such as disabling antivirus.
+
+This project demonstrates how to detect and monitor malicious activity using Elastic's powerful search and visualization capabilities.
+```
