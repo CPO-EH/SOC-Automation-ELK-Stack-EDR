@@ -1,0 +1,71 @@
+# Investigate SSH Brute Force Attack
+
+## Step 1: Investigate the Alert in Kibana
+
+1. Navigate to the **Kibana Web GUI**.
+2. Go to the **Menu** and click on **Security > Alerts**.
+3. Select the **first alert** and review the **rule description**:
+   - **Rule Description**:  
+     This rule detects failed authentication attempts towards the account: `root`.  
+   - **Alert Reason**:  
+     Event with source `159.65.147.193` by `root` created a medium alert: `MYDFIR-SSH-Brute-Force-Attempt-TechGneek`.
+
+## Step 2: Conduct OSINT Investigation
+
+We researched the suspicious IP (`159.65.147.193`) using OSINT tools like:
+- [AbuseIPDB](https://www.abuseipdb.com)
+- [GreyNoise](https://www.greynoise.io)
+
+### Key Findings:
+- **IP**: Is this IP known to perform brute force activity?  
+  **Yes**  
+- **Affected Users**: Any other users affected by this IP?  
+  **Yes**, 7 users were targeted: `root`, `admin`, `oracle`, `test`, `ansadmin`, `duao`, `ftp`.  
+- **Successful Logins**: Were any login attempts successful?  
+  **No**  
+- **Post-Success Activity**: If so, what activity occurred after the successful login?  
+  **N/A**
+
+---
+
+## Step 3: Configure Alerts to Push to osTicket
+
+1. In Kibana:
+   - Go to **Menu > Security > Rules**.
+   - Select the **SSH Brute Force Attempt** rule.
+   - Click **Edit Rule Settings** and navigate to **Actions**.
+   - Modify the rule to send alerts to **osTicket** via webhook.
+
+2. Verify the alert in the **osTicket Web GUI** to confirm it was received.
+
+---
+
+## Step 4: Resolve `server.publicBaseUrl` Configuration Issue
+
+1. In Kibana, you may encounter an issue where the `server.publicBaseUrl` is not configured.  
+2. On your **ELK server**, open the configuration file:
+   ```bash
+   nano /etc/kibana/kibana.yml
+   ```
+3. Uncomment the `server.publicBaseUrl` setting and configure it:
+   ```yaml
+   server.publicBaseUrl: "http://149.28.235.88:5601"
+   ```
+4. Save the file and restart the Kibana service:
+   ```bash
+   systemctl restart kibana
+   ```
+
+---
+
+## Step 5: Confirm Alert Integration with osTicket
+
+1. Return to the Kibana **GUI** and verify the issue is resolved.
+2. Check the **osTicket Web GUI** to ensure the alert is pulling the rule as expected.
+3. Assign the ticket to an agent, resolve it, and close the ticket.
+
+---
+
+## Example Rule Investigation Link:
+For reference, here is the link to the investigated rule:  
+[View Rule in Kibana](http://149.28.235.88:5601/app/security/detections/rules/id/e7d1f873-ec09-4b12-ab28-c7d20cf5d862?timerange=(global:(linkTo:!(timeline),timerange:(from:1730687724544,kind:absolute,to:1730688024544)),timeline:(linkTo:!(global),timerange:(from:1730687724544,kind:absolute,to:1730688024544)))
