@@ -363,3 +363,4 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Mythic Server and Agent Setup (C2 Framework)](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20Server%20and%20Agent%20Setup) 
