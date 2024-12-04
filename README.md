@@ -24,6 +24,39 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 - Vultr: Cloud hosting platform for network architecture deployment.
 - Elastic Defend: Endpoint protection solution for detecting and responding to threats in real time.
 
+# Table of Contents
+
+1. **Network Diagram & Attack Lifecycle (MITRE ATT&CK Framework)**
+2. **ELK Stack Installation**
+   - [ELK Stack Server Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/ELK%20Stack%20Server%20Install)
+   - [Windows Server 2022 Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Windows%20Server%202022%20Installation)
+   - [Sysmon Installation on Windows Server 2022](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Sysmon%20Installation%20on%20Windows%20Server%202022)
+   - [Elastic Agent - Fleet Server Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Elastic%20Agent%20-%20Fleet%20Server%20Installation)
+   - [Ingest Sysmon & Windows Defender Logs Into Elastic](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Ingest%20Sysmon%20%26%20Windows%20Defender%20Logs%20Into%20Elastic)
+   - [Elastic Agent Installation on SSH Server & Log Authentication](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Elastic%20Agent%20Install%20On%20SSH%20Server%20%26%20Log%20Authentication)
+
+3. **Alerts & Monitoring**
+   - [Alerts & Maps RDP & SSH Activity](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Alerts%20%26%20Maps%20RDP%20%26%20SSH%20Activity)
+
+4. **Mythic C2 Installation & Configuration**
+   - [Mythic Server Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20Server%20Installation)
+   - [Mythic Server and Agent Setup](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20Server%20and%20Agent%20Setup)
+   - [Mythic C2 - Alerts and Dashboard](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20C2%20-%20Alerts%20and%20Dashboard)
+
+5. **osTicket Integration**
+   - [osTicket Setup & Configuration](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/osTicket%20Setup%20%26%20Configuration)
+   - [osTicket & ELK Stack Integration](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/osTicket%20%26%20ELK%20Stack%20Integration)
+
+6. **Incident Investigation**
+   - [Investigate SSH Brute Force Attack](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Investigate%20SSH%20Brute%20Force%20Attack)
+   - [Investigate RDP Brute Force Attack](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Investigate%20RDP%20Brute%20Force%20Attack)
+   - [Investigating Mythic Agent](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Investigating%20Mythic%20Agent)
+
+7. **Elastic Defend (EDR)**
+   - [Elastic Defend (EDR) Setup](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Elastic%20Defend%20(EDR)%20Setup)
+
+
+
 ## Project Walkthrough
 
 - Network Diagram & Attack Lifecycle (Mitre Att&ck Framework)
