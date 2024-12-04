@@ -27,6 +27,8 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 # Table of Contents
 
 1. **Network Diagram & Attack Lifecycle (MITRE ATT&CK Framework)**
+   - [Network Diagram](https://github.com/user-attachments/assets/2f8c15aa-b71b-48cf-a7f4-27b51a80556f)
+   - [Attack Lifecycle Diagram](https://github.com/user-attachments/assets/79c4ae90-b519-4729-a498-c95f80e06a69)
 2. **ELK Stack Installation**
    - [ELK Stack Server Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/ELK%20Stack%20Server%20Install)
    - [Windows Server 2022 Installation](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Windows%20Server%202022%20Installation)
@@ -59,7 +61,7 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
 
 ## Project Walkthrough
 
-- Network Diagram & Attack Lifecycle (Mitre Att&ck Framework)
+- Network Diagram & Attack Lifecycle (C2 Framework)
 <div align="center">
   <table>
     <!-- Row 1 -->
@@ -823,4 +825,3 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
     </tr>
   </table>
 </div>
-
