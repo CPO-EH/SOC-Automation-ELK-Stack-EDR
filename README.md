@@ -745,3 +745,49 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
     </tr>
   </table>
 </div>
+
+- [Elastic Defend (EDR) Setup and Response]()
+
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Enabling Elastic Defend (EDR) in Kibana</strong><br>
+        <img width="300" alt="Enabling Elastic Defend (EDR) in Kibana" src="https://github.com/user-attachments/assets/133db536-ecf2-4d48-bf9a-0a366f8e0f84">
+      </td>
+      <td align="center">
+        <strong>Elastic Defend Rule(s) Configuration</strong><br>
+        <img width="300" alt="Elastic Defend Rule(s) Configuration" src="https://github.com/user-attachments/assets/243b6f07-283d-4c18-9fca-6b0d2c7f0662">
+      </td>
+      <td align="center">
+        <strong>Elastic Defend EDR Detected Malware (techgneek-30.exe)</strong><br>
+        <img width="300" alt="Elastic Defend EDR detectect Malware  techgneek exe  " src="https://github.com/user-attachments/assets/095471e6-5f37-4a9d-b681-5c353f05cf93">
+      </td>
+      <td align="center">
+        <strong>Windows Server (Host) Isolated</strong><br>
+        <img width="300" alt="Windows Server (Host) Isolated" src="https://github.com/user-attachments/assets/aebe004b-60fa-47eb-8d73-5da0b15c22b7">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Elastic Defend Quarantined Malware (techgneek-30.exe)</strong><br>
+        <img width="300" alt="Elastic Defend EDR quarintined malware  techgneek exe" src="https://github.com/user-attachments/assets/8140d9f5-8996-4c2e-9e1b-2651eeef07e9">
+      </td>
+      <td align="center">
+        <strong>Ran Query for Malware in Elastic</strong><br>
+        <img width="300" alt="Ran Query for Malware in Elastic to see telemetry" src="https://github.com/user-attachments/assets/315bf981-b185-4e2d-9e8e-6a1c9563d1fb">
+      </td>
+      <td align="center">
+        <strong>Elastic Defend Malware Prevention Alert</strong><br>
+        <img width="300" alt="Elastic Defend Malware Prevention Alert" src="https://github.com/user-attachments/assets/76ab36f4-b9a3-4ce9-8791-0c8e34ac2488">
+      </td>
+      <td align="center">
+        <strong>Overview of Alerts</strong><br>
+        <img width="300" alt="Elastic Defend Overview of Alerts" src="https://github.com/user-attachments/assets/ffde1dd2-3b90-4e83-ae20-94ce7d790dde">
+      </td>
+    </tr>
+  </table>
+</div>
+
