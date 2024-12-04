@@ -415,5 +415,57 @@ The SOC Automation & ELK Stack EDR project was designed to simulate a real-world
   </table>
 </div>
 
+- [Mythic C2 - Alerts and Dashboard](https://github.com/techgneek/SOC-Automation-ELK-Stack-EDR/blob/main/Mythic%20C2%20-%20Alerts%20and%20Dashboard)
+  
+<div align="center">
+  <table>
+    <!-- Row 1 -->
+    <tr>
+      <td align="center">
+        <strong>Network Connections Visualization</strong><br>
+        <img width="300" alt="Network Connections Visualization" src="https://github.com/user-attachments/assets/5637c510-e723-4734-be7d-fe6159be8a2a">
+      </td>
+      <td align="center">
+        <strong>External Network Connections</strong><br>
+        <img width="300" alt="External Network Connections" src="https://github.com/user-attachments/assets/3cf1add8-06f0-4d23-a5b6-952d7dd15588">
+      </td>
+      <td align="center">
+        <strong>Suspicious Activity Dashboard</strong><br>
+        <img width="300" alt="Suspicious Activity Dashboard" src="https://github.com/user-attachments/assets/7c00758a-7dd5-4f0a-8537-2e69c9f9d971">
+      </td>
+      <td align="center">
+        <strong>Process Create Events</strong><br>
+        <img width="300" alt="Process Create Events" src="https://github.com/user-attachments/assets/f4f3d83f-ed2f-46fe-860b-89e72c1a8646">
+      </td>
+      <td align="center">
+        <strong>Alert Rule for Process Create</strong><br>
+        <img width="300" alt="Alert Rule for Process Create" src="https://github.com/user-attachments/assets/cdf7fbeb-700a-48f2-8393-14f9275c9f3a">
+      </td>
+    </tr>
+    <!-- Row 2 -->
+    <tr>
+      <td align="center">
+        <strong>Detection Rule in Kibana</strong><br>
+        <img width="300" alt="Detection Rule in Kibana" src="https://github.com/user-attachments/assets/b4dcedf7-5628-4f0e-9bca-0a2716cd392f">
+      </td>
+      <td align="center">
+        <strong>Event ID 1: Process Creates</strong><br>
+        <img width="300" alt="Event ID 1 Process Creates" src="https://github.com/user-attachments/assets/2de4d1f9-c32c-4a18-ac65-469fc89fc324">
+      </td>
+      <td align="center">
+        <strong>SHA256 Analysis</strong><br>
+        <img width="300" alt="SHA256 Analysis" src="https://github.com/user-attachments/assets/4e89bd1c-2016-4ada-aaeb-38da815a6262">
+      </td>
+      <td align="center">
+        <strong>Elastic Query Results</strong><br>
+        <img width="300" alt="Elastic Query Results" src="https://github.com/user-attachments/assets/5cace8d9-d8b3-4af1-a9a0-91fbcbea8731">
+      </td>
+      <td align="center">
+        <strong>TechGneek-Suspicious-Activity Dashboard</strong><br>
+        <img width="300" alt="TechGneek-Suspicious-Activity Dashboard" src="https://github.com/user-attachments/assets/4e3daab5-648c-4a20-b206-89fd92144d74">
+      </td>
+    </tr>
+  </table>
+</div>
 
 
