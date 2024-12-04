@@ -78,10 +78,10 @@ If the webhook test fails:
 ## Images
 | Step | Description | Screenshot |
 |------|-------------|------------|
-| 1 | API Key Generation in osTicket | ![API Key](https://github.com/user-attachments/assets/35b65f75-bb69-4dca-96c5-85b24c0dd653) |
-| 2 | Webhook Configuration in Kibana | ![Webhook Config](https://github.com/user-attachments/assets/7e9b6423-8c88-4e5a-adaa-1b16f38f8678) |
-| 3 | Ping Test Results | ![Ping Results](https://github.com/user-attachments/assets/72710660-78d0-4f08-be71-dde1dfe56a3b) |
-| 4 | Successful Webhook Test | ![Webhook Test Success](https://github.com/user-attachments/assets/7484620d-55c6-4313-897d-ccb0fcc159c6) |
+| 1 | API Key Generation in osTicket | ![API Key](https://github.com/user-attachments/assets/52ecc0c0-01a5-4bd7-9151-34665916274d) |
+| 2 | Webhook Configuration in Kibana | ![Webhook Config](https://github.com/user-attachments/assets/e3601f8d-1fd2-4ebf-adeb-f29ffb932e00) |
+| 3 | Ping Test Results | ![Ping Results](https://github.com/user-attachments/assets/58a3678f-95c0-47d4-a718-091e8cc65b34) |
+| 4 | Successful Webhook Test | ![Webhook Test Success](https://github.com/user-attachments/assets/306e1d37-0ab5-48fb-9749-f2b4aeac271b) |
 
 ---
 
