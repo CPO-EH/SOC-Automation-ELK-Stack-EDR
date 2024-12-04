@@ -78,10 +78,10 @@ If the webhook test fails:
 ## Images
 
  Step 
-| 1 | API Key Generation in osTicket | (https://github.com/user-attachments/assets/52ecc0c0-01a5-4bd7-9151-34665916274d) |
-| 2 | Webhook Configuration in Kibana | (https://github.com/user-attachments/assets/e3601f8d-1fd2-4ebf-adeb-f29ffb932e00) |
-| 3 | Ping Test Results | (https://github.com/user-attachments/assets/58a3678f-95c0-47d4-a718-091e8cc65b34) |
-| 4 | Successful Webhook Test | (https://github.com/user-attachments/assets/306e1d37-0ab5-48fb-9749-f2b4aeac271b) |
+| 1 | API Key Generation in osTicket | (https://github.com/user-attachments/assets/3af757a3-05e9-4607-b018-44ed7284e97d) |
+| 2 | Webhook Configuration in Kibana | (https://github.com/user-attachments/assets/688bc4da-44b7-4c1c-b439-5fe262acfde6) |
+| 3 | Ping Test Results | (https://github.com/user-attachments/assets/75c9c1dd-10fa-493f-ac18-8540342f3767) |
+| 4 | Successful Webhook Test | (https://github.com/user-attachments/assets/10c3a9cf-44ef-484a-8308-1a518b8c2887) |
 
 ---
 
