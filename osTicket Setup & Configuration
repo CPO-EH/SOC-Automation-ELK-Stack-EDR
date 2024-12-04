@@ -1,0 +1,100 @@
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Environment Details](#environment-details)
+3. [Setup Steps](#setup-steps)
+4. [Configuration Details](#configuration-details)
+5. [Troubleshooting](#troubleshooting)
+6. [Screenshots](#screenshots)
+7. [Conclusion](#conclusion)
+
+---
+## osTicket Setup and Configuration
+
+Here's the setup and configuration of the **osTicket Ticketing System** on a Windows Server 2022 environment using XAMPP as the web server and MySQL database.
+
+The goal of this setup is to create a functional ticketing system for IT support while showcasing system administration and configuration skills.
+
+---
+
+## Environment Details
+- **Operating System:** Windows Server 2022  
+- **Hostname:** `TechGneek-osTicket`  
+- **Private IP:** `172.31.0.5`  
+- **Public IP:** `64.176.209.7`  
+- **Storage:** 55 GB  
+- **CPU:** 1 vCPU  
+- **RAM:** 2 GB  
+- **Firewall Rules:** TCP/1-65535 for SOC Analyst IP, Windows Server, and SSH Linux Server  
+
+---
+
+## Setup Steps
+
+### 1. Install XAMPP
+- Download XAMPP from [Apache Friends](https://www.apachefriends.org/download.html).  
+- Install the Apache, MySQL, and PHP components.
+
+### 2. Configure Windows Firewall
+- Allow inbound rules for:
+  - Port 80 (HTTP)
+  - Port 443 (HTTPS)
+
+### 3. Edit XAMPP Configuration Files
+- Update `apache_domain` in the XAMPP configuration file to your public IP: `64.176.209.7`.
+
+### 4. Configure phpMyAdmin
+- Access phpMyAdmin via `http://localhost/phpmyadmin`.
+- Update the root account to use your public IP and set the password to `Winter2024!`.
+
+### 5. Upload osTicket Files
+- Download the self-hosted version of osTicket from [osTicket](https://osticket.com/download/).  
+- Extract the files into a folder named `osticket` inside the `htdocs` directory in the XAMPP installation.
+
+### 6. Install osTicket
+- Access the installer via `http://<your-public-ip>/osticket/upload/`.
+- Rename the file `include/ost-sampleconfig.php` to `ost-config.php` and remove write permissions:
+  ```bash
+  cd C:\xampp\htdocs\osticket\upload\include
+  icacls .\ost-config.php /reset
+  ```
+
+### 7. Create MySQL Database
+- Create a database named `TechGneek-30-Day-DB` in phpMyAdmin.
+- Use the following credentials:
+  - **MySQL Hostname:** `64.176.209.7`
+  - **MySQL Database:** `TechGneek-30-Day-DB`
+  - **MySQL Username:** `root`
+  - **MySQL Password:** `Winter2024!`
+
+---
+
+## Configuration Details
+### XAMPP Configuration
+- Apache domain updated to `64.176.209.7`.
+- MySQL root password updated to `Winter2024!`.
+
+### phpMyAdmin Configuration
+- Database user `root` configured to use the server's public IP.
+
+---
+
+## Troubleshooting
+### Issue: osTicket installer reports that the configuration file is missing or not writable
+**Solution:** Ensure the `ost-config.php` file exists and has correct permissions:
+```bash
+cd C:\xampp\htdocs\osticket\upload\include
+icacls .\ost-config.php /reset
+```
+
+---
+
+## Screenshots
+
+https://imgur.com/a/4GYOkcy
+
+---
+
+## Conclusion
+This documentation outlines the complete process for setting up osTicket on a Windows Server 2022 environment. By following the steps, you can successfully deploy osTicket and troubleshoot common issues.  
+
+Feel free to reach out for any questions or suggestions!
