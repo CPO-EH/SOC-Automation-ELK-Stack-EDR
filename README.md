@@ -34,17 +34,14 @@ Below is the full network layout of the SOC Automation Lab, including IP address
 | Kali Linux             | Attack Machine (Brute Force)     | 172.16.166.136     |
 | Mythic C2 Server       | Ubuntu – C2 Framework            | 149.28.236.144     |
 
----
 
-### 🔄 Communication Flow
-- **SOC Analyst Laptop** connects to **Elastic/Kibana GUI** via web interface  
-- **Kali Linux** performs simulated brute-force attacks on **Windows RDP** and **Linux SSH**  
-- **Mythic C2** communicates with compromised hosts to simulate C2 behavior  
-- **Elastic Agent (Fleet)** collects logs from **Windows** and **Linux servers**  
-- **Elastic Defend** detects malicious activity and isolates infected endpoints  
-- **osTicket** automatically creates tickets from Elastic alerts  
+## 🔍 Project Objectives
 
----
+- 🚀 Deployed and configured the **Elastic Stack (Elasticsearch, Logstash, Kibana)** for centralized log ingestion, analysis, and alerting.  
+- 🖥️ Installed **Elastic Agent with Fleet Server** to collect telemetry from **Windows Server 2022**, **Linux (SSH)**, and **Sysmon** logs.  
+- ⚔️ Simulated **RDP/SSH brute-force attacks** and **C2 activity** using **Kali Linux** and **Mythic C2** to test threat detection and incident response.  
+- 🎫 Integrated **osTicket** with **ELK Stack** to automatically generate incident tickets from triggered alerts.  
+- 🛡️ Created **endpoint isolation alert rules** in **Elastic Defend** to trigger on detected **C2 behavior**, using **KQL (Kibana Query Language)** to analyze logs and pinpoint affected hosts.
 
 
 
