@@ -1,28 +1,52 @@
 # SOC-Automation-ELK-Stack-EDR
 
-## Objective
+The **SOC Automation with ELK Stack & EDR** lab simulates a real-world Security Operations Center (SOC) environment built on a cloud-based architecture using **Vultr**. This project focuses on both **defensive and offensive security practices**, combining **threat detection**, **incident response automation**, and **endpoint protection**.
 
-The SOC Automation & ELK Stack EDR project was designed to simulate a real-world cybersecurity environment where both offensive and defensive measures were implemented. The primary goal was to build a lab for detecting and responding to simulated cyberattacks using the ELK Stack and automated workflows.
+Key technologies used include:
+- 🧠 **Elastic Stack (Elasticsearch, Logstash, Kibana)** for centralized logging and monitoring  
+- 🛡️ **Elastic Defend** for endpoint detection and response (EDR)  
+- 🐚 **Mythic C2** and **Kali Linux** for offensive security testing  
+- 🎫 **osTicket** for automated alert-to-ticket workflows  
+- ☁️ Hosted on **Vultr Cloud** with a fully isolated virtual private cloud (VPC) environment  
 
-### Skills Learned
+The lab simulates brute-force and command-and-control (C2) attacks to validate detection pipelines and automated response mechanisms. It demonstrates how SOC teams can respond to real-time threats with visibility across endpoints and servers.
 
-- Network Threat Detection: Configured ELK Stack for log ingestion, analysis, and alert generation.
-- Incident Response: Designed workflows for active response to cyber incidents.
-- Automation: Automated alerting and incident ticket creation using integrated tools like osTicket.
-- Offensive Security: Simulated cyberattacks using Kali Linux and Mythic C2 to identify weaknesses and 
-  validate defense strategies.
-- Network Architecture Design: Built a cloud-based infrastructure in Vultr to simulate real-world SOC 
-  operations.
+## 🌐 Network Topology
 
-### Tools Used
+Below is the full network layout of the SOC Automation Lab, including IP addresses and system roles. All components are hosted within a private VPC in **Vultr Cloud**, simulating real-world SOC infrastructure.
 
-- Elastic Stack (ELK): Elasticsearch, Logstash, and Kibana for log management and analysis.
-- Mythic C2: Command-and-control framework for attack simulation and payload delivery.
-- osTicket: Ticketing system for incident management and response.
-- Fleet Server: Managed endpoint agents for data collection and telemetry.
-- Kali Linux: Offensive security platform for attack emulation.
-- Vultr: Cloud hosting platform for network architecture deployment.
-- Elastic Defend: Endpoint protection solution for detecting and responding to threats in real time.
+### 🛠️ Internal Lab Network (VPC)
+- **Subnet:** 172.31.0.0/24  
+- **Subnet Mask:** 255.255.255.0
+
+| Hostname               | OS / Role                       | VPC IP        | Public IP         |
+|------------------------|----------------------------------|---------------|-------------------|
+| Elastic & Kibana       | Ubuntu – Log Management          | 172.31.0.3     | 149.28.235.88     |
+| Fleet Server           | Ubuntu – Agent Management        | 172.31.0.4     | 149.28.237.158    |
+| Windows Server         | Windows Server 2022 – RDP Target| 172.31.0.2     | 107.191.42.102    |
+| Linux Server           | Ubuntu – SSH Target              | 172.31.0.1     | 140.82.12.65      |
+| osTicket Server        | Windows Server – Ticketing       | 172.31.0.5     | 64.176.209.7      |
+
+### 🌍 External Devices
+| Device Name            | OS / Role                        | Public IP         |
+|------------------------|----------------------------------|-------------------|
+| SOC Analyst Laptop     | Analyst Access (Kibana GUI)      | 71.185.214.246     |
+| Kali Linux             | Attack Machine (Brute Force)     | 172.16.166.136     |
+| Mythic C2 Server       | Ubuntu – C2 Framework            | 149.28.236.144     |
+
+---
+
+### 🔄 Communication Flow
+- **SOC Analyst Laptop** connects to **Elastic/Kibana GUI** via web interface  
+- **Kali Linux** performs simulated brute-force attacks on **Windows RDP** and **Linux SSH**  
+- **Mythic C2** communicates with compromised hosts to simulate C2 behavior  
+- **Elastic Agent (Fleet)** collects logs from **Windows** and **Linux servers**  
+- **Elastic Defend** detects malicious activity and isolates infected endpoints  
+- **osTicket** automatically creates tickets from Elastic alerts  
+
+---
+
+
 
 # Table of Contents
 
