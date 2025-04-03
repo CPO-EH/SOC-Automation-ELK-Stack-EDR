@@ -3,11 +3,11 @@
 The **SOC Automation with ELK Stack & EDR** lab simulates a real-world Security Operations Center (SOC) environment built on a cloud-based architecture using **Vultr**. This project focuses on both **defensive and offensive security practices**, combining **threat detection**, **incident response automation**, and **endpoint protection**.
 
 Key technologies used include:
-- 🧠 **Elastic Stack (Elasticsearch, Logstash, Kibana)** for centralized logging and monitoring  
-- 🛡️ **Elastic Defend** for endpoint detection and response (EDR)  
-- 🐚 **Mythic C2** and **Kali Linux** for offensive security testing  
-- 🎫 **osTicket** for automated alert-to-ticket workflows  
-- ☁️ Hosted on **Vultr Cloud** with a fully isolated virtual private cloud (VPC) environment  
+- **Elastic Stack (Elasticsearch, Logstash, Kibana)** for centralized logging and monitoring  
+- **Elastic Defend** for endpoint detection and response (EDR)  
+- **Mythic C2** and **Kali Linux** for offensive security testing  
+- **osTicket** for automated alert-to-ticket workflows  
+- Hosted on **Vultr Cloud** with a fully isolated virtual private cloud (VPC) environment  
 
 The lab simulates brute-force and command-and-control (C2) attacks to validate detection pipelines and automated response mechanisms. It demonstrates how SOC teams can respond to real-time threats with visibility across endpoints and servers.
 
@@ -37,11 +37,11 @@ Below is the full network layout of the SOC Automation Lab, including IP address
 
 ## 🔍 Project Objectives
 
-- 🚀 Deployed and configured the **Elastic Stack (Elasticsearch, Logstash, Kibana)** for centralized log ingestion, analysis, and alerting.  
-- 🖥️ Installed **Elastic Agent with Fleet Server** to collect telemetry from **Windows Server 2022**, **Linux (SSH)**, and **Sysmon** logs.  
-- ⚔️ Simulated **RDP/SSH brute-force attacks** and **C2 activity** using **Kali Linux** and **Mythic C2** to test threat detection and incident response.  
-- 🎫 Integrated **osTicket** with **ELK Stack** to automatically generate incident tickets from triggered alerts.  
-- 🛡️ Created **endpoint isolation alert rules** in **Elastic Defend** to trigger on detected **C2 behavior**, using **KQL (Kibana Query Language)** to analyze logs and pinpoint affected hosts.
+- Deployed and configured the **Elastic Stack (Elasticsearch, Logstash, Kibana)** for centralized log ingestion, analysis, and alerting.  
+- Installed **Elastic Agent with Fleet Server** to collect telemetry from **Windows Server 2022**, **Linux (SSH)**, and **Sysmon** logs.  
+- Simulated **RDP/SSH brute-force attacks** and **C2 activity** using **Kali Linux** and **Mythic C2** to test threat detection and incident response.  
+- Integrated **osTicket** with **ELK Stack** to automatically generate incident tickets from triggered alerts.
+- Created **endpoint isolation alert rules** in **Elastic Defend** to trigger on detected **C2 behavior**, using **KQL (Kibana Query Language)** to analyze logs and pinpoint affected hosts.
 
 
 
